@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>C Language</title>
+</head>
+<body>
+    <h1>C User-defined functions</h1>
+    <p><b>In this tutorial, you will learn to create user-defined functions in C programming with the help of an example.</b></p>
+    <p>In this tutorial, you will learn to create user-defined functions in
+        C programming with the help of an example.<br>
+        C allows you to define functions according to your need. These functions 
+        are known as user-defined functions. For example:
+    <br>Suppose, you need to create a circle and color it depending upon the radius and color.
+    You can create two functions to solve this problem:</p>
+    <p>
+        <li>createCircle() function</li>
+        <li>color() function</li>
+    </p>
+
+    <h2>Example: User-defined function</h2>
+    <p>Here is an example to add two integers. To perform this task, 
+        we have created an user-defined addNumbers().</p>
+
+        <h5>
+            #include <stdio.h>
+                int addNumbers(int a, int b);         // function prototype<br>
+                
+                int main()<br>
+                {<br>
+                    int n1,n2,sum;<br>
+                
+                    printf("Enters two numbers: ");<br>
+                    scanf("%d %d",&n1,&n2);<br>
+                
+                    sum = addNumbers(n1, n2);        // function call<br>
+                    printf("sum = %d",sum);<br>
+                
+                    return 0;<br>
+                }<br>
+                
+                int addNumbers(int a, int b)         // function definition<br>   
+                {
+                    int result;<br>
+                    result = a+b;<br>
+                    return result;                  // return statement<br>
+                }<br>
+            </h5>
+
+        <h2>Function prototype</h2>
+        <p>A function prototype is simply the declaration of a function that 
+            specifies function's name, parameters and return type. 
+            It doesn't contain function body.A function prototype gives information to
+            the compiler that the function may later be used in the program.<br></p>
+
+
+        <h2>Syntax of function prototype</h2>
+        <h5>returnType functionName(type1 argument1, type2 argument2, ...);</h5>
+
+        <br><p>In the above example, int addNumbers(int a, int b); is the function prototype which 
+            provides the following information to the compiler:</p>
+
+            <ol>
+                <li>name of the function is addNumbers()</li>
+                <li>return type of the function is int</li>
+                <li>two arguments of type int are passed to the function</li>
+            </ol>
+        <p>The function prototype is not needed if the user-defined function 
+            is defined before the main() function.</p>
+
+        <h2>Calling a function</h2>
+        <p>Control of the program is transferred 
+            to the user-defined function by calling it.
+        </p>
+
+        <h3>Syntax of function call</h3>
+        <h5>functionName(argument1, argument2, ...);</h5>
+        <p>In the above example, the function call is made using 
+            addNumbers(n1, n2); statement inside the main() function.
+        </p>
+
+        <h2>Function definition</h2>
+        <p>Function definition contains the block of code to perform a specific task. 
+            In our example, adding two numbers and returning it.</p>
+
+            <h3>Syntax of function definition</h3>
+            <h5>returnType functionName(type1 argument1, type2 argument2, ...)<br>
+                {<br>
+                    //body of the function<br>
+                }</h5>
+            <p>When a function is called, the control of the program is transferred to the function definition. And, the compiler starts 
+                executing the codes inside the body of a function.</p>
+
+        <h2>Passing arguments to a function</h2>
+
+        <p>In programming, argument refers to the variable passed to the function. 
+            In the above example, two variables n1 and n2 are 
+            passed during the function call.<br>The parameters a and b accepts the passed arguments in the function definition. These 
+            arguments are called formal parameters of the function.</p>
+
+            <img src="https://cdn.programiz.com/sites/tutorial2program/files/pass-arguments-c-programming.jpg">
+            <p>The type of arguments passed to a function and the formal parameters must match, otherwise, the compiler will throw an error.</p>
+            <p>If n1 is of char type, a also should be of char type. If n2 is of float type, variable b also should be of float type.<br>
+                A function can also be called without passing an argument.</p>
+
+        <h2>Return Statement</h2>
+
+        <p>The return statement terminates the execution of a function and returns a value to the calling function. 
+            The program control is transferred to the calling function after the return statement.<br>
+            In the above example, the value of the result variable is returned to
+            the main function. The sum variable in the main() function is assigned this value.
+        </p>
+
+        <img src="https://cdn.programiz.com/sites/tutorial2program/files/c-return-statement.jpg" alt="Return Statement of Function">
+
+        <h3>Syntax of return statement</h3>
+        <h5>return (expression);</h5>
+
+        <p>For example,</p>
+        <h5>return a;<br>
+            return (a+b);</h5>
+
+        <p>The type of value returned from the function and the return type specified in the 
+            function prototype and function definition must match.</p>
+
+        <p>Visit this page to learn more on<a href="#"> passing arguments and returning value from a function.</a></p>
+
+</body>
+</html>

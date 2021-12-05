@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Array</title>
+</head>
+<body>
+    <h1>C Arrays</h1>
+    <p>
+        You will learn how to work with arrays in this tutorial. With the help of examples, you will learn how to declare, initialise, and access items of an array.
+    </p>
+    <p>
+        <figure><img alt="C arrays" height="400" src="//cdn.programiz.com/sites/tutorial2program/files/c-arrays.jpg" title="C arrays" width="740"><figcaption>Arrays in C</figcaption></figure><p id="introduction">A variable that can store multiple values is known as an array. If you wish to hold 100 integers, for example, you can use an array.</p>
+    </p>
+    <pre>
+        <code>int data[100];</code> 
+    </pre>
+
+    <h2>How to declare an array?</h2>
+    <pre>
+        dataType arrayName[arraySize];
+    </pre>
+    <p><strong>For example,</strong></p>
+    <pre>
+        float mark[5];
+    </pre>
+    <p>
+        We declared a floating-point array, <var>mark</var>, in this case. Its sizes are 5 by 5. It can therefore carry 5 floating-point values.
+    </p>
+    <p>
+        It's vital to remember that once an array is declared, it can't be altered in size or type.  
+    </p>
+
+    <h2>Access Array Elements</h2>
+    <p>Indices are used to access items in an array.</p>
+    <p>
+        Assume you've declared an array <var>mark</var> like this. <var>mark[0]</var> is the initial element, followed by <var>mark[1]</var>, and so on.
+    </p>
+    <figure>
+        <img alt="C Array declaration " height="111" src="//cdn.programiz.com/sites/tutorial2program/files/c-array-declaration.jpg" width="362"><figcaption>Declare an Array</figcaption>
+    </figure>
+    </pre>
+    <p><strong>For example,</strong></p>
+    <pre>
+     <ul>
+    <li>Arrays have 0 as the first index, not 1. In this example, <var>mark[0]</var> is the first element.</li>
+    <li>If the size of an array is <var>n</var>, to access the last element, the <code>n-1</code> index is used. In this example, <var>mark[4]</var></li>
+    <li>Suppose the starting address of <code>mark[0]</code> is <strong>2120d</strong>. Then, the address of the <code>mark[1]</code> will be <strong>2124d</strong>. Similarly, the address of <code>mark[2]</code> will be <strong>2128d</strong> and so on.</li>
+    <li>This is because the size of a <code>float</code> is 4 bytes.</li>
+    </li>
+     </ul>   
+    <h2>How to initialize an array</h2>
+    <p>It is possible to initialize an array during declaration. For example,</p>
+    <pre><code>int mark[5] = {19, 10, 8, 17, 9};</code>
+    </pre>
+    <p>You can also initialize an array like this. </p>
+    <pre><code>int mark[] = {19, 10, 8, 17, 9};</code></pre>
+    <p>Here, we haven't specified the size. However, the compiler knows its size is 5 as we are initializing it with 5 elements.</p>
+<figure><img alt="Initialize an array in C programming" height="111" src="//cdn.programiz.com/sites/tutorial2program/files/c-array-initialization.jpg" width="362"><figcaption>Initialize an Array</figcaption></figure><p>Here,</p>
+<pre>
+    mark[0] is equal to 19
+    mark[1] is equal to 10
+    mark[2] is equal to 8
+    mark[3] is equal to 17
+    mark[4] is equal to 9</pre>
+    <h2>Change Value of Array elements</h2>
+    <h2>Input and Output Array Elements</h2>
+    <h2>Example 1: Array Input/Output</h2>
+    <h2>Example 2: Calculate Average</h2>
+    <h3>Access elements out of its bound!</h3>
+    <h2>Multidimensional arrays</h2>
+    <p>In this tutorial, you learned about arrays. These arrays are called one-dimensional arrays.</p>
+    <p>
+        In the next tutorial, you will learn about multidimensional arrays (array of an array).
+    </p>
+</body>
+</html>

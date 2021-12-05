@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>C Language</title>
+</head>
+<body>
+        <h1>Types of User-defined Functions in C Programming</h1>
+
+        <p><b>In this tutorial, you will learn about different approaches you can take to
+             solve the same problem using functions.</b></p>
+
+             <p>These 4 programs below check whether the integer 
+                 entered by the user is a prime number or not.<br>
+                 The output of all these programs below is the same, 
+                 and we have created a user-defined function in each example. 
+                 However, the approach we have taken in each example is different.
+            </p>
+
+            <h3>Example 2: No arguments passed but a return value</h3>
+            <p>
+                #include <stdio.h><br>
+                    int getInteger();<br>
+                    
+                    int main()<br>
+                    {<br>
+                        int n, i, flag = 0;<br>
+                    
+                       // no argument is passed<br>
+                        n = getInteger();    <br>
+                    
+                        for(i=2; i<=n/2; ++i)<br>
+                        {<br>
+                            if(n%i==0){<br>
+                                flag = 1;<br>
+                                break;<br>
+                            }<br>
+                        }<br>
+                    
+                        if (flag == 1)<br>
+                            printf("%d is not a prime number.", n);<br>
+                        else<br>
+                            printf("%d is a prime number.", n);<br>
+                    
+                        return 0;<br>
+                    }<br>
+                    
+                    // returns integer entered by the user<br>
+                    int getInteger()       <br>
+                    {<br>
+                        int n;<br>
+                    
+                        printf("Enter a positive integer: ");<br>
+                        scanf("%d",&n);<br>
+                        <br>
+                        return n;<br>
+                    }
+            </p>
+
+            <p>The empty parentheses in the n = getInteger(); statement 
+                indicates that no argument is passed to the function. And, the value 
+                returned from the function is assigned to n.</p>
+
+                <p>
+                    Here, the getInteger() function takes input from the user and returns it. The code to check whether 
+                    a number is prime or not is inside the main() function.
+                </p>
+
+                <h3>Example 3: Argument passed but no return value</h3>
+                <p>
+                    #include <stdio.h><br>
+                        void checkPrimeAndDisplay(int n);<br>
+                        
+                        int main()<br>
+                        {<br>
+                            int n;<br>
+                        
+                            printf("Enter a positive integer: ");<br>
+                            scanf("%d",&n);<br>
+                        
+                            // n is passed to the function<br>
+                            checkPrimeAndDisplay(n);<br>
+                        
+                            return 0;<br>
+                        }<br>
+                        
+                        // return type is void meaning doesn't return any value<br>
+                        void checkPrimeAndDisplay(int n) <br>
+                        {<br>
+                            int i, flag = 0;<br>
+                        
+                            for(i=2; i <= n/2; ++i)<br>
+                            {<br>
+                                if(n%i == 0){<br>
+                                    flag = 1;<br>
+                                    break;<br>
+                                }<br>
+                            }<br>
+                            if(flag == 1)<br>
+                                printf("%d is not a prime number.",n);<br>
+                            else<br>
+                                printf("%d is a prime number.", n);<br>
+                        }<br>
+                </p>
+    
+                <p>The integer value entered by the 
+                    user is passed to the checkPrimeAndDisplay() function.</p>
+    
+                    <p>Here, the checkPrimeAndDisplay() function checks whether the argument
+                        passed is a prime number or not and displays the appropriate message.
+                    </p>
+
+
+                    <h3>Example 4: Argument passed and a return value</h3>
+                    <p>
+                        #include <stdio.h><br>
+                            int checkPrimeNumber(int n);<br>
+                            
+                            int main()<br>
+                            {<br>
+                                int n, flag;<br>
+                            
+                                printf("Enter a positive integer: ");<br>
+                                scanf("%d",&n);<br>
+                            
+                                // n is passed to the checkPrimeNumber() function<br>
+                                // the returned value is assigned to the flag variable<br>
+                                flag = checkPrimeNumber(n);<br>
+                            
+                                return 0;<br>
+                            }<br>
+                            
+                            // int is returned from the function<br>
+                            int checkPrimeNumber(int n)<br>
+                            {<br>
+                                int i;<br>
+                            
+                                for(i=2; i <= n/2; ++i)<br>
+                                {<br>
+                                    if(n%i == 0){<br>
+                                        return 1;<br>
+                                    }<br>
+                                }<br>
+                                
+                                return 0;<br>
+                            }<br>
+                    </p>
+        
+                    <p>The input from the user is 
+                        passed to the checkPrimeNumber() function.<br>
+                        If the passed argument is a prime number, the function 
+                        returns 0. If the passed argument is a non-prime number, the function returns 1. 
+                        The return value is assigned to the flag variable.
+                    </p>
+        
+                        <p>Depending on whether flag is 0 or 1, 
+                            an appropriate message is printed from the main() 
+                            function.
+                        </p>
+
+                        <h2>Which approach is better?</h2>
+                        <p>Well, it depends on the problem you are trying to solve. In this case,
+                            passing argument and returning a value from the 
+                            function (example 4) is better.<br>A function should perform a specific task. 
+                            The checkPrimeNumber() function doesn't take input from the user nor it displays the appropriate message. 
+                            It only checks whether a number is prime or not.
+                        </p>
+
+
+
+
+    </body>
+    </html>

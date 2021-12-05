@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables, Constants and Literals</title>
+</head>
+<body>
+    <h1>C Variables, Constants and Literals</h1>
+    <p>
+        This course will teach you about variables and the rules for naming them. You'll also learn how to build constants and different types of literals in C programming.
+    </p>
+    <h2>Video: Variables in C Programming</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/h4VBpylsjJc?autoplay=1&mute=1"></iframe>
+    
+    <h2>Variables</h2>
+    <p>
+        A variable is a container (storage area) for data in programming.
+    </p>
+    <p>
+        Each variable should be given an unique name to denote the storage area (identifier). Variable names are nothing more than a symbol for a memory location. For example:
+        <code>int playerScore = 95;</code>
+        <p>Here, <var>playerScore</var> is a variable of <code>int</code> type. Here, the variable is assigned an integer value <code>95</code>.</p>
+        <p>
+            The term variable comes from the fact that a variable's value can be modified.
+        </p>
+        <code>
+            char ch = 'a';
+            <br>// some code
+            <br>ch = '1';
+        </code>
+        
+    <h3>Rules for naming a variable</h3>
+    <ol><li>A variable name can only have letters (both uppercase and lowercase letters), digits and underscore.</li>
+        <li>The first letter of a variable should be either a letter or an underscore.</li>
+        <li>There is no rule on how long a variable name (identifier) can be. However, you may run into problems in some compilers if the variable name is longer than 31 characters.</li>
+    </ol><p><strong>Note:</strong> You should always try to give meaningful names to variables. For example: <code>firstName</code> is a better variable name than <code>fn</code>.</p>
+
+    <p>
+        C is a language with a lot of types. Which means that once a variable is declared, it cannot be modified. For example:
+
+        <p>
+            <code>
+                int number = 5;      // integer variable
+                <br>number = 5.5;        // error
+                <br>double number;       // error
+            </code>
+        </p>
+    </p>
+    <p>
+        Here, the type of <var>number</var> variable is <code>int</code>. You cannot assign a floating-point (decimal) value <samp>5.5</samp> to this variable. Also, you cannot redefine the data type of the variable to <code>double</code>. By the way, to store the decimal values in C, you need to declare its type to either <code>double</code> or <code>float</code>.
+    </p>
+
+    <h2>Literals</h2>
+
+    <p>
+        Literals are data used for representing fixed values. They can be used directly in the code. For example: <var>1</var>, <var>2.5</var>, and <var>'c'</var>.
+    </p>
+    <p>
+        Here, <var>1</var>, <code>2.5</code> and <var>'c'</var> are literals. Why? These terms cannot have various values assigned to them.
+    </p>
+
+    <h3>1. Integers</h3>
+    <p>
+        An integer is a numeric literal (a number) that does not contain any fractional or exponential parts. In C programming, there are three types of integer literals:
+    </p>
+    <ul>
+        <li>decimal (base 10)</li>
+	    <li>octal (base 8)</li>
+	    <li>hexadecimal (base 16)</li>
+    </ul>
+    <p>For example:</p>
+    <pre>
+        Decimal: 0, -9, 22 etc
+        Octal: 021, 077, 033 etc
+        Hexadecimal: 0x7f, 0x2a, 0x521
+    </pre>
+    <p>
+        In C programming, octal starts with a <var>0</var>, and hexadecimal starts with a <var>0x</var>. 
+    </p>
+
+    <h3>2. Floating-point Literals</h3>
+    <p>
+        A numeric literal with a fractional or exponent form is known as a floating-point literal. For example:
+    </p>
+    <pre>
+        -2.0
+        0.0000234
+        -0.22E-5
+    </pre>
+    <p>
+        <strong>Note:</strong> <code>E-5 = 10</code><code><sup>-5</sup></code>
+    </p>
+
+    <h3>3. Characters</h3>
+    <p>
+        A character literal is created by enclosing a single character inside single quotation marks. For example: <var>'a'</var>, <var>'m'</var>, <var>'F'</var>, <var>'2'</var> and <var>'}'</var>.
+    </p>
+
+    <h3>4. Escape Sequences</h3>
+    <p>
+        In C programming, it is sometimes important to include characters that cannot be typed or have specific meaning. For instance, newline (enter), tab, and question mark (?).
+    </p>
+    <p>
+        Escape sequences are used to get these characters.
+    </p>
+    <table><caption>Escape Sequences</caption>
+        <thead><tr><th scope="col">Escape Sequences</th>
+			<th scope="col">Character</th>
+		</tr></thead><tbody><tr><td><code>\b</code></td>
+			<td>Backspace</td>
+		</tr><tr><td><code>\f</code></td>
+			<td>Form feed</td>
+		</tr><tr><td><code>\n</code></td>
+			<td>Newline</td>
+		</tr><tr><td><code>\r</code></td>
+			<td>Return</td>
+		</tr><tr><td><code>\t</code></td>
+			<td>Horizontal tab</td>
+		</tr><tr><td><code>\v</code></td>
+			<td>Vertical tab</td>
+		</tr><tr><td><code>\\</code></td>
+			<td>Backslash</td>
+		</tr><tr><td><code>\'</code></td>
+			<td>Single quotation mark</td>
+		</tr><tr><td><code>\"</code></td>
+			<td>Double quotation mark</td>
+		</tr><tr><td><code>\?</code></td>
+			<td>Question mark</td>
+		</tr><tr><td><code>\0</code></td>
+			<td>Null character</td>
+		</tr></tbody>
+    </table>
+
+    <h3>5. String Literals</h3>
+    <p>
+        A string literal is a collection of characters enclosed by double-quote marks. For example: 
+    </p>
+    <pre>
+"good"                    //string constant
+""                       //null string constant
+"      "                //string constant of six white space
+"x"                    //string constant having a single character.
+"Earth is round\n"    //prints string with a newline
+    </pre>
+
+    <h2>Constants</h2>
+    <p>
+        The <code>const</code> keyword can be used to define a variable whose value cannot be modified. As a result, a constant will be created. For example: 
+    </p>
+    <pre><code>
+        const double PI = 3.14;
+    </code></pre>
+    <p>
+        You'll notice that we've introduced the keyword <code>const</code>. 
+    </p>
+    <p>
+        <var>PI</var> is a symbolic constant in this case, and its value cannot be modified. 
+    </p>
+    <pre>
+        <code>const double PI = 3.14;
+        PI = 2.9; //Error </code>
+    </pre>
+    <p>
+        Constant can also be defined using <code>#define</code> preprocessor directive. 
+    </p>
+</body>
+</html>

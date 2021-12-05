@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>C Language</title>
+</head>
+<body>
+    <h1>C Functions</h1>
+    <h3><b>In this tutorial, you will be introduced to functions (both user-defined and standard library functions) in C programming. Also, you will learn why functions are used in programming.</b></h3>
+
+    <p>A function is a block of code that performs a specific task.
+        <br>Suppose, you need to create a program to create a circle and color it. You can create two functions to solve this problem:</p>
+        <li>create a circle function</li>
+        <li>create a color function</li>
+        <p>Dividing a complex problem into smaller chunks makes our program easy to understand and reuse.</p>
+
+
+        <!-- Types of function -->
+
+        <h2>Types of function</h2>
+        <p>There are two types of function in C programming :</p>
+        <li><a href="#">Standard library functions</a></li>
+        <li><a href="#">User-defined functions</a></li>
+
+        <!-- Standard library functions -->
+
+        <h2>Standard library functions</h2>
+
+        <p>The standard library functions are built-in functions in C programming.
+        <br>These functions are defined in header files. For example,</p>
+        <li>The printf() is a standard library function to send formatted output to the screen (display output on the screen). This function is defined in the stdio.h header file.
+            <br>Hence, to use the printf()function, we need to include the stdio.h header file using #include <stdio.h>.</li>
+        <br><li>The sqrt() function calculates the square root of a number. The function is defined in the math.h header file.</li>
+
+        <!-- User-defined function -->
+
+        <h2>User-defined function</h2>
+
+        <p>You can also create functions as per your need. Such functions created by the user are known as user-defined functions.</p>
+
+        <h2>How user-defined function works?</h2>
+        <p>#include <stdio.h>
+            void functionName()
+            <br>{
+                <br>... .. ...
+                <br>... .. ...
+                <br>}
+            
+            <br>int main()
+            <br>{
+                <br>... .. ...
+                <br>... .. ...
+            
+                <br>functionName();
+                
+                <br>... .. ...
+                <br>... .. ...
+                <br>}</p>
+
+            <br><p>The execution of a C program begins from the main() function.
+                <br>When the compiler encounters functionName();, control of the program jumps to</p>
+                <h4> void functionName()</h4>
+
+                <p>And, the compiler starts executing the codes inside functionName().
+                    <br><br>The control of the program jumps back to the main() function once code inside the function definition is executed.
+                </p>
+
+                <p>Note, function names are identifiers and should be unique.
+<br>
+                   <br> This is just an overview of user-defined functions. Visit these pages to learn more on:</p>
+                   <li><a href="#">User-defined Function in C programming</a></li>
+                    <li><a href="#">Types of user-defined Functions</a></li>
+
+                    <h2>Advantages of user-defined function</h2>
+                        <ol><p>
+                        <li>The program will be easier to understand, maintain and debug.</li>
+                        <li>Reusable codes that can be used in other programs</li>
+                        <li>A large program can be divided into smaller modules. Hence, a large project can be divided among many programmers.</li>
+                    </ol></p>
+</body>
+</html>

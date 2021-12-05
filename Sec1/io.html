@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Input Output (I/O)</title>
+</head>
+<body>
+    <h1>C Input Output (I/O)</h1>
+    <p>You will learn how to use the scanf() function to take user input and the printf() function to display output to the user in this tutorial.</p>
+<!----------------------------------->    
+    <h2>Video: Get User Input in C Programming</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/17gp5DJEyiw?autoplay=1&mute=1"></iframe>
+<!----------------------------------->     
+    <h2>C Output</h2>
+    <p><code>printf()</code> is one of the main output function. The function sends formatted output to the screen. For example,</p>
+<!----------------------------------->     
+    <h3>Example 1: C Output</h3>
+    <pre class="exec">
+        <code>#include &lt;stdio.h&gt;    
+        int main()
+        { 
+            // Displays the string inside quotations
+            printf("C Programming");
+            return 0;
+        }</code></pre>
+        
+        <p><strong>Output</strong></p>
+        
+        <pre>
+        <samp>C Programming</samp></pre>
+        
+        <p>How does this program work?</p>
+        
+        <ul><li>All valid C programs must contain the <code>main()</code> function. The code execution begins from the start of the <code>main()</code> function.</li>
+        <br>    
+            <li>The <code>printf()</code> is a library function to send formatted output to the screen. The function prints the string inside quotations.</li><br> 
+            <li>To use <code>printf()</code> in our program, we need to include <code>stdio.h</code> header file using the <code>#include &lt;stdio.h&gt;</code> statement.</li><br> 
+            <li>The <code>return 0;</code> statement inside the <code>main()</code> function is the "Exit status" of the program. It's optional.</li>
+        </ul>
+<!----------------------------------->     
+    <h3>Example 2: Integer Output</h3>
+    <pre>
+        <code>#include &lt;stdio.h&gt;
+        int main()
+        {
+            int testInteger = 5;
+            printf("Number = %d", testInteger);
+            return 0;
+        }</code></pre>
+        
+        <p><strong>Output</strong></p>
+        
+        <pre>
+        <samp>Number = 5</samp></pre>
+        
+        <p>We use <code>%d</code> format specifier to print <code>int</code> types. Here, the <code>%d</code> inside the quotations will be replaced by the value of <var>testInteger</var>.</p>
+<!----------------------------------->     
+    <h3>Example 3: float and double Output</h3>
+    <pre>
+        <code>#include &lt;stdio.h&gt;
+        int main()
+        {
+            float number1 = 13.5;
+            double number2 = 12.4;
+        
+            printf("number1 = %f\n", number1);
+            printf("number2 = %lf", number2);
+            return 0;
+        }</code></pre>
+        
+        <p><strong>Output</strong></p>
+        
+        <pre>
+        <samp>number1 = 13.500000
+        number2 = 12.400000</samp></pre>
+        
+        <p>To print <code>float</code>, we use <code>%f</code> format specifier. Similarly, we use <code>%lf</code> to print <code>double</code> values.</p>
+<!----------------------------------->     
+    <h3>Example 4: Print Characters</h3>
+    <pre>
+        <code>#include &lt;stdio.h&gt;
+        int main()
+        {
+            char chr = 'a';    
+            printf("character = %c", chr);  
+            return 0;
+        } </code></pre>
+        
+        <p><strong>Output</strong></p>
+        
+        <pre>
+        <samp>character = a</samp>
+        </pre>
+<!----------------------------------->     
+    <h2>C Input</h2>
+    <p><code>scanf()</code> is one of the commonly used function to take input from the user. The <code>scanf()</code> function reads formatted input from the standard input such as keyboards.</p>
+<!----------------------------------->     
+    <h3>Example 5: Integer Input/Output</h3>
+    <pre>
+        <code>#include &lt;stdio.h&gt;
+        int main()
+        {
+            int testInteger;
+            printf("Enter an integer: ");
+            scanf("%d", &amp;testInteger);  
+            printf("Number = %d",testInteger);
+            return 0;
+        }</code></pre>
+        
+        <p><strong>Output</strong></p>
+        
+        <pre>
+        <samp>Enter an integer: 4
+        Number = 4</samp></pre>
+        
+        <p>Here, we have used <code>%d</code> format specifier inside the <code>scanf()</code> function to take <code>int</code> input from the user. When the user enters an integer, it is stored in the <var>testInteger</var> variable.</p>
+        
+        <p class="note-tip">Notice, that we have used <code>&amp;testInteger</code> inside <code>scanf()</code>. It is because <var>&amp;testInteger</var> gets the address of <var>testInteger</var>, and the value entered by the user is stored in that address.</p>
+        
+<!----------------------------------->     
+    <h3>Example 6: Float and Double Input/Output</h3>
+    <pre>
+        <code>#include &lt;stdio.h&gt;
+        int main()
+        {
+            float num1;
+            double num2;
+        
+            printf("Enter a number: ");
+            scanf("%f", &amp;num1);
+            printf("Enter another number: ");
+            scanf("%lf", &amp;num2);
+        
+            printf("num1 = %f\n", num1);
+            printf("num2 = %lf", num2);
+        
+            return 0;
+        }</code></pre>
+        
+        <p><strong>Output</strong></p>
+        
+        <pre>
+        <samp>Enter a number: 12.523
+        Enter another number: 10.2
+        num1 = 12.523000
+        num2 = 10.200000</samp></pre>
+        
+        <p>We use <code>%f</code> and <code>%lf</code> format specifier for <code>float</code> and <code>double</code> respectively.</p>
+<!----------------------------------->     
+    <h3>Example 7: C Character I/O</h3>
+    <pre>
+        <code>#include &lt;stdio.h&gt;
+        int main()
+        {
+            char chr;
+            printf("Enter a character: ");
+            scanf("%c",&amp;chr);     
+            printf("You entered %c.", chr);  
+            return 0;
+        }   </code></pre>
+        
+        <p><strong>Output</strong></p>
+        
+        <pre>
+        <samp>Enter a character: g
+        You entered g</samp>
+        </pre>
+        <p>In the above programme, when a character is entered by the user, the character is not saved. An integer value (ASCII value) is instead stored.</p>
+        <p>When we use the <code>%c</code> text format to display that value, the entered character appears. The ASCII value of the character is printed when we utilise <code>%d</code> to display it.</p>
+<!----------------------------------->     
+    <h3>Example 8: ASCII Value</h3>
+    <pre>
+        <code>#include &lt;stdio.h&gt;
+        int main()
+        {
+            char chr;
+            printf("Enter a character: ");
+            scanf("%c", &amp;chr);     
+        
+            // When %c is used, a character is displayed
+            printf("You entered %c.\n",chr);  
+        
+            // When %d is used, ASCII value is displayed
+            printf("ASCII value is %d.", chr);  
+            return 0;
+        }</code></pre>
+        
+        <p>Output</p>
+        
+        <pre>
+        <samp>Enter a character: g
+        You entered g.
+        ASCII value is 103.</samp>
+        </pre>
+<!----------------------------------->     
+    <h2>I/O Multiple Values</h2>
+    <p>Here's how you can take multiple inputs from the user and display them.</p>
+
+<pre>
+<code>#include &lt;stdio.h&gt;
+int main()
+{
+    int a;
+    float b;
+
+    printf("Enter integer and then a float: ");
+  
+    // Taking multiple inputs
+    scanf("%d%f", &amp;a, &amp;b);
+
+    printf("You entered %d and %f", a, b);  
+    return 0;
+}</code></pre>
+
+<p><strong>Output</strong></p>
+<pre>
+     <samp>Enter integer and then a float: -3
+     3.4
+     You entered -3 and 3.400000</samp>
+</pre>
+<!----------------------------------->     
+    <h2>Format Specifiers for I/O</h2>
+    <p>As you can see from the above examples, we use</p>
+
+<ul><li><code>%d</code> for <code>int</code></li>
+	<li><code>%f</code> for <code>float</code></li>
+	<li><code>%lf</code> for <code>double</code></li>
+	<li><code>%c</code> for <code>char</code></li>
+</ul><p>Here's a list of commonly used C data types and their format specifiers.</p>
+
+<table><thead><tr><th>Data Type</th>
+			<th>Format Specifier</th>
+		</tr></thead><tbody><tr><td><code>int</code></td>
+			<td><code>%d</code></td>
+		</tr><tr><td><code>char</code></td>
+			<td><code>%c</code></td>
+		</tr><tr><td><code>float</code></td>
+			<td><code>%f</code></td>
+		</tr><tr><td><code>double</code></td>
+			<td><code>%lf</code></td>
+		</tr><tr><td><code>short int</code></td>
+			<td><code>%hd</code></td>
+		</tr><tr><td><code>unsigned int</code></td>
+			<td><code>%u</code></td>
+		</tr><tr><td><code>long int</code></td>
+			<td><code>%li</code></td>
+		</tr><tr><td><code>long long int</code></td>
+			<td><code>%lli</code></td>
+		</tr><tr><td><code>unsigned long int</code></td>
+			<td><code>%lu</code></td>
+		</tr><tr><td><code>unsigned long long int</code></td>
+			<td><code>%llu</code></td>
+		</tr><tr><td><code>signed char</code></td>
+			<td><code>%c</code></td>
+		</tr><tr><td><code>unsigned char</code></td>
+			<td><code>%c</code></td>
+		</tr><tr><td><code>long double</code></td>
+			<td><code>%Lf</code></td>
+		</tr></tbody></table>
+</body>
+</html>

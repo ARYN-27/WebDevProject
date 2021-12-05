@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>C Data Types</h1>
+    <p>In this tutorial, you will learn about basic data types in C programming, such as int, float, and char.</p>
+    <h2>Video: Data Types in C Programming</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/sARaqR0hRI4?autoplay=1&mute=1"></iframe>
+    <p>Data types are variable declarations in C programming. The type and size of data linked with variables is determined by this. As an example,</p>
+    <pre>
+        <code>int myVar;</code></pre>
+        
+        <p>Here, <var>myVar</var> is a variable of <code>int</code> (integer) type. The size of <code>int</code> is 4 bytes.</p>
+<!-------------------------------------->        
+    <h2>Basic types</h2>
+    <p>Here's a table containing commonly used types in C programming for quick access.</p>
+
+<table border=1 cellpadding="1" cellspacing="1"><thead><tr><th scope="col">Type</th>
+			<th scope="col">Size (bytes)</th>
+			<th scope="col">Format Specifier</th>
+		</tr></thead><tbody><tr><td><code>int</code></td>
+			<td>at least 2, usually 4</td>
+			<td><code>%d</code>, <code>%i</code></td>
+		</tr><tr><td><code>char</code></td>
+			<td>1</td>
+			<td><code>%c</code></td>
+		</tr><tr><td><code>float</code></td>
+			<td>4</td>
+			<td><code>%f</code></td>
+		</tr><tr><td><code>double</code></td>
+			<td>8</td>
+			<td><code>%lf</code></td>
+		</tr><tr><td><code>short int</code></td>
+			<td>2 usually</td>
+			<td><code>%hd</code></td>
+		</tr><tr><td><code>unsigned int</code></td>
+			<td>at least 2, usually 4</td>
+			<td><code>%u</code></td>
+		</tr><tr><td><code>long int</code></td>
+			<td>at least 4, usually 8</td>
+			<td><code>%ld</code>, <code>%li</code></td>
+		</tr><tr><td><code>long long int</code></td>
+			<td>at least 8</td>
+			<td><code>%lld</code>, <code>%lli</code></td>
+		</tr><tr><td><code>unsigned long int</code></td>
+			<td>at least 4</td>
+			<td><code>%lu</code></td>
+		</tr><tr><td><code>unsigned long long int</code></td>
+			<td>at least 8</td>
+			<td><code>%llu</code></td>
+		</tr><tr><td><code>signed char</code></td>
+			<td>1</td>
+			<td><code>%c</code></td>
+		</tr><tr><td><code>unsigned char</code></td>
+			<td>1</td>
+			<td><code>%c</code></td>
+		</tr><tr><td><code>long double</code></td>
+			<td>at least 10, usually 12 or 16</td>
+			<td><code>%Lf</code></td>
+		</tr></tbody></table>
+<!-------------------------------------->        
+    <h3>int</h3>
+    <p>Integers are whole numbers that can have both zero, positive and negative values but no decimal values. For example, <code>0</code>, <code>-5</code>, <code>10</code></p>
+
+<p>We can use <code>int</code> for declaring an integer variable.</p>
+<pre>
+    <code>int id;</code></pre>
+<p>Here, <var>id</var> is a variable of type integer.</p>
+<p>You can declare multiple variables at once in C programming. For example,</p>
+
+<pre>
+    <code>int id, age;</code></pre>
+
+<p>The size of <code>int</code> is usually 4 bytes (32 bits). And, it can take <code>2<sup>32</sup></code> distinct states from <code>-2147483648</code> to <code>2147483647</code>.</p>
+
+<!--------------------------------------->
+    <h3>float and double</h3>
+    <p><code>float</code> and <code>double</code> are used to hold real numbers.</p>
+
+<pre>
+     <code>float salary;
+     double price;</code></pre>
+
+<p>In C, floating-point numbers can also be represented in exponential. For example,</p>
+
+<pre>
+     <code>float normalizationFactor = 22.442e2;</code></pre>
+<p>What's the difference between <code>float</code> and <code>double</code>?</p>
+
+<p>The size of <code>float</code> (single precision float data type) is 4 bytes. And the size of <code>double</code> (double precision float data type) is 8 bytes.</p>
+<!--------------------------------------->    
+    <h3>char</h3>
+    <p>Keyword <code>char</code> is used for declaring character type variables. For example,</p>
+
+<pre>
+     <code>char test = 'h';</code></pre>
+<p>The size of the character variable is 1 byte.</p>
+<!--------------------------------------->    
+    <h3>void</h3>
+    <p>A <code>void</code> type is a type that isn't complete. It can be translated as "nothing" or "no type." You can think of <code>void</code> as the absence of something.</p>
+    <p>If a function does not return anything, then the return type should be <code>void</code>.</p>
+    <p>Note that, you cannot create variables of <code>void</code> type.</p>
+<!--------------------------------------->    
+    <h3>short and long</h3>
+    <p>If you need to use a large number, you can use a type specifier <code>long</code>. Here's how:</p>
+
+<pre>
+<code>long a;
+long long b;
+long double c;</code></pre>
+
+<p>Here variables <var>a</var> and <var>b</var> can store integer values. And, <var>c</var> can store a floating-point number.</p>
+
+<p>If you are sure, only a small integer (<code>[−32,767, +32,767]</code> range) will be used, you can use <code>short</code>.</p>
+
+<pre>
+short d;</pre>
+
+<p>You can always check the size of a variable using the <code>sizeof()</code> operator.</p>
+
+<pre>
+<code>#include &lt;stdio.h&gt;      
+int main() {
+  short a;
+  long b;
+  long long c;
+  long double d;
+
+  printf("size of short = %d bytes\n", sizeof(a));
+  printf("size of long = %d bytes\n", sizeof(b));
+  printf("size of long long = %d bytes\n", sizeof(c));
+  printf("size of long double= %d bytes\n", sizeof(d));
+  return 0;
+}</code></pre>
+<!--------------------------------------->    
+    <h3>signed and unsigned</h3>
+    <p>Type modifiers in C are <code>signed</code> and <code>unsigned</code>. You can use them to change a data type's data storage. As an example,</p>
+    <p>Here, the variable <var>x</var> can hold only zero and positive values because we have used the <code>unsigned</code> modifier.</p>
+
+<p>Considering the size of <code>int</code> is 4 bytes, variable <var>y</var> can hold values from <code>-2<sup>31</sup></code> to <code>2<sup>31</sup>-1</code>, whereas variable <var>x</var> can hold values from <code>0</code> to <code>2<sup>32</sup>-1</code>.</p>
+
+<p>Other data types defined in C programming are:</p>
+
+<ul><li>bool Type</li>
+	<li>Enumerated type</li>
+	<li>Complex types</li>
+</ul>
+<!--------------------------------------->    
+    <h2>Derived Data Types</h2>
+    <p>Data types that are derived from fundamental data types are derived types. For example: arrays, pointers, function types, structures, etc.</p>
+    
+</body>
+</html>
