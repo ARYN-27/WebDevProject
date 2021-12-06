@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>C Language</title>
+</head>
+<body>
+    <h1>C while and do...while Loop</h1>
+    <p><b>In this tutorial, you will learn to create while and do...while loop
+        in C programming with the help of examples.</b>
+    </p>
+    <p>In programming, loops are used to repeat a 
+    block of code until a specified condition is met. <br>
+<br>
+    C programming has three types of loops.</p>
+    <ol>
+        <li>
+            for loop
+        </li>
+        <li>while loop</li>
+        <li>do...while loop</li>
+    </ol>
+</p>
+
+<p>
+    In the previous tutorial, we learned about for loop. 
+    In this tutorial, we will learn about while and do..while loop.
+</p>
+
+    <h2>while loop</h2>
+    <p>The syntax of the while loop is:</p>
+    <h5>
+        while (testExpression) {<br>
+            // the body of the loop <br>
+          }
+    </h5>
+
+    <h3>How while loop works?</h3>
+    <li>The while loop evaluates the testExpression inside the parentheses ().</li>
+    <li>If testExpression is true, statements inside the body of while loop are executed. 
+        Then, testExpression is evaluated again.</li>
+    <li>The process goes on until testExpression is evaluated to false.</li>
+    <li>If testExpression is false, the loop terminates (ends).</li>
+    <p>To learn more about test expression (when the test expression is evaluated to true and false), 
+    check out <a href="#">relational</a> and <a href="#">logical operators.</a></p>
+
+    <h3>Flowchart of while loop</h3>
+    <img src="img/sec2_3.png">
+
+    <h3>Example 1: while loop</h3>
+    <h5>
+        <p>
+            // Print numbers from 1 to 5<br>
+            #include <stdio.h><br>
+
+            int main() {<br>
+                int i = 1;<br>
+                <br>
+                while (i <= 5) {<br>
+                    printf("%d\n", i);<br>
+                    ++i;<br>
+            }<br>
+            return 0;<br>
+        }<br>
+        </p>
+    </h5>
+
+    <h4>Output</h4>
+    <h5>1 <br> 2 <br>3<br> 4<br> 5</h5>
+    <p>
+        Here, we have initialized i to 1.
+        <ol>
+            <li>When i = 1, the test expression i <= 5 is true. Hence, 
+                the body of the while loop is executed. This prints 1 
+                on the screen and the value of i is increased to 2.</li>
+                <li>Now, i = 2, the test expression i <= 5 is again true. 
+                    The body of the while loop is executed again. This prints 
+                    2 on the screen and the value of i is increased to 3.</li>
+                <li>This process goes on until i becomes 6. Then, the test 
+                    expression i <= 5 will be false and the loop terminates.</li>
+        </ol>
+    </p>
+
+    <h3>do...while loop</h3>
+    <p>The do..while loop is similar to the while loop with one 
+        important difference. The body of do...while loop is 
+        executed at least once. 
+        Only then, the test expression is evaluated.</p>
+
+        <p>The syntax of the do...while loop is:</p>
+        <h5>do {<br>
+            // the body of the loop<br>
+          }<br>
+          while (testExpression);</h5>
+
+          <h3>How do...while loop works?</h3>
+          <li>The body of do...while loop is executed once. 
+              Only then, the testExpression is evaluated.</li>
+          <li>If testExpression is <b>true</b>, the body of the loop is executed 
+              again and testExpression is evaluated once more.</li>
+          <li>This process goes on until testExpression becomes <b>false.</b></li>
+          <li>If testExpression is <b>false</b>, the loop ends.</li>
+          
+          <h3>
+            Flowchart of do...while Loop
+          </h3>
+          <img src="img/sec2_3-1.png">
+
+          <h3>Example 2: do...while loop</h3>
+          <h5>
+              <p>
+                // Program to add numbers until the user enters zero<br>
+                <br>
+                #include <stdio.h><br>
+                int main() {<br>
+                  double number, sum = 0;<br>
+                  <br>
+                  // the body of the loop is executed at least once<br>
+                  do {<br>
+                    printf("Enter a number: ");<br>
+                    scanf("%lf", &number);<br>
+                    sum += number;<br>
+                  }<br>
+                  while(number != 0.0);<br>
+                  <br>
+                  printf("Sum = %.2lf",sum);<br>
+                  <br>
+                  return 0;<br>
+                }<br>
+              </p>
+          </h5>
+          <h4>Output</h4>
+          <h5>
+            Enter a number: 1.5<br>
+            Enter a number: 2.4<br>
+            Enter a number: -3.4<br>
+            Enter a number: 4.2<br>
+            Enter a number: 0<br>
+            Sum = 4.70<br>
+          </h5>
+
+          <p>
+            Here, we have used a do...while loop to prompt the user 
+            to enter a number. The loop works as long as the 
+            input number is not 0.
+            
+          </p>
+          <p>
+            The do...while loop executes at least once i.e. 
+            the first iteration runs without checking the condition. 
+            The condition is checked only after the first 
+            iteration has been executed.
+          </p>
+
+          <h5>
+            do {<br>
+                printf("Enter a number: ");<br>
+                scanf("%lf", &number);<br>
+                sum += number;<br>
+              }<br>
+              while(number != 0.0);<br>
+          </h5>
+
+          <p>So, if the first input is a non-zero number,
+              that number is added to the sum variable 
+              and the loop continues to the next iteration. 
+              This process is repeated until the user enters 0.
+            </p>
+
+            <p>
+                But if the first input is 0, there will be no second iteration of the loop and sum becomes 0.0.
+                <br>
+                <br>Outside the loop, we print the value of sum.
+            </p>
+</body>
+</html>

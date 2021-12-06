@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>C Language</title>
+</head>
+<body>
+    <h1>C if...else Statement</h1>
+    <p><b>In this tutorial, you will learn to create for 
+        loop in C programming with the help of examples.</b>
+    <br>
+    In programming, a loop is used to repeat a block of 
+    code until the specified condition is met.</p>
+    
+    <p>
+        C programming has three types of loops:
+        <ol>
+            <li>for loop</li>
+            <li>while loop</li>
+            <li>do...while loop</li>
+        </ol>
+        <br>
+        We will learn about for loop in this tutorial. In the next tutorial, 
+        we will learn about while and do...while loop.
+    </p>
+
+    <h2>for Loop</h2>
+    <p>The syntax of the for loop is:</p>
+
+    <h5>
+        for (initializationStatement; testExpression; updateStatement)<br>
+        {<br>
+            // statements inside the body of loop<br>
+        }
+    </h5>
+
+    <h3>How for loop works?</h3>
+    <li>The initialization statement is executed only once.</li>
+    <li>Then, the test expression is evaluated. If the test expression 
+        is evaluated to false, the for loop is terminated.</li>
+    <li>However, if the test expression is evaluated to true, statements inside the body of the for 
+        loop are executed, and the update expression is updated.</li>
+    <li>Again the test expression is evaluated.</li>
+
+    <p>This process goes on until the test expression is false. 
+        When the test expression is false, the loop terminates.
+    <br>
+    To learn more about test expression (when the test expression is evaluated to true and false), 
+    check out <a href="#">relational</a> and <a href="#">logical operators.</a></p>
+
+
+    <h3>for loop Flowchart</h3>
+    <img src="img/sec2_2.png">
+
+
+    <h3>Example 1: for loop</h3>
+    <h5>
+        <p>
+            // Print numbers from 1 to 10<br>
+            #include <stdio.h><br>
+
+            int main() {<br>
+                int i;<br>
+                <br>
+                for (i = 1; i < 11; ++i)<br>
+            {<br>
+                printf("%d ", i);<br>
+            }<br>
+                return 0;<br>
+            }<br>
+        </p>
+    </h5>
+
+    <h4>Output</h4>
+    <h5>1 2 3 4 5 6 7 8 9 10</h5>
+
+    <ol>
+        <li>i is initialized to 1.</li>
+        <li>The test expression i < 11 is evaluated. Since 1 less than 11 is true, the body of for loop is executed. 
+            This will print the 1 (value of i) on the screen.</li>
+        <li>The update statement ++i is executed.
+            Now, the value of i will be 2. Again, the test expression is evaluated to true, and the body of for loop is executed. 
+            This will print 2 (value of i) on the screen.</li>
+        <li>Again, the update statement ++i is executed and the test expression i < 11 
+            is evaluated. This process goes on until i becomes 11.</li>
+        <li>When i becomes 11, i < 11 will be false, and the for loop terminates.</li>
+    </ol>
+
+    <h3>Example 2: for loop</h3>
+        <h5>
+            <p>
+                // Program to calculate the sum of first n natural numbers<br>
+                // Positive integers 1,2,3...n are known as natural numbers<br>
+                <br>
+                #include <stdio.h><br>
+                int main()<br>
+                {<br>
+                    int num, count, sum = 0;<br>
+                    <br>
+                    printf("Enter a positive integer: ");<br>
+                    scanf("%d", &num);<br>
+                    <br>
+                    // for loop terminates when num is less than count<br>
+                    for(count = 1; count <= num; ++count)<br>
+                    {<br>
+                        sum += count;<br>
+                    }<br>
+                    <br>
+                    printf("Sum = %d", sum);<br>
+                    <br>
+                    return 0;<br>
+                }<br>
+        </p>
+    </h5>
+
+    <h4>Output</h4>
+    <h5>Enter a positive integer: 10<br>
+        Sum = 55
+    </h5>
+
+    <p>
+        The value entered by the user is 
+        stored in the variable num. Suppose, the user entered 10.
+
+        <br>
+        The count is initialized to 1 and the test expression is 
+        evaluated. Since the test expression count<=num (1 less than or equal to 10) 
+        is true, the body of for loop is executed and the 
+        value of sum will equal to 1.
+
+        <br>
+        Then, the update statement ++count is executed and count
+         will equal to 2. Again, the test expression is evaluated. 
+         Since 2 is also less than 10, the test expression is evaluated 
+         to true and the body of the for loop is executed. 
+         Now, sum will equal 3.
+
+         <br>
+         This process goes on and the
+         sum is calculated until the count reaches 11.
+
+         <br>
+         When the count is 11, the test expression is evaluated 
+         to 0 (false), and the loop terminates.
+
+         <br>Then, the value of sum is printed on the screen.
+    </p>
+
+    <p>We will learn about while loop and do...while loop in the next tutorial.</p>
+
+</body>
+</html>
