@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Array</title>
+
+    <style>
+        h1 {
+            font-family: "Major Mono Display", monospace;
+            font-size: 51px;
+            cursor: pointer;
+            /**
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+            */
+        }
+
+        h2 {
+            font-family: "Major Mono Display", monospace;
+        }
+
+        /**
+            =================================================================================================================================================
+            Navigation and Landing Page
+            =================================================================================================================================================
+        */
+
+        .navigation {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 100%;
+            height: 70vh;
+        }
+
+        .navi-child {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            height: 80vh;
+            align-content: space-around;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .navi-button {
+            align-items: center;
+            /*background-image: radial-gradient(100% 100% at 100% 0,#5adaff 0,#5468ff 100%);*/
+            border: 3px solid black;
+            /*border-image: linear-gradient(135deg, #2afadf 10%, #4c83ff 100%) 1;*/
+            box-sizing: border-box;
+            /* color: #000; */
+            display: inline-flex;
+            /* fill: #000; */
+            font-size: 22px;
+            /* font-weight: 600; */
+            height: 87px;
+            justify-content: center;
+            letter-spacing: -0.8px;
+            line-height: 24px;
+            min-width: 140px;
+            outline: 0;
+            padding: 0 17px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            width: 48%;
+        }
+
+        .navi-button:hover {
+            /*border-width: 5px;*/
+            border-image: linear-gradient(135deg, #2afadf 10%, #4c83ff 100%) 1;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+                rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        }
+
+        .navi-child-forum {
+            display: flex;
+            width: 100%;
+            height: 80vh;
+            flex-wrap: wrap;
+            align-content: center;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="intro-page-border">
+        <div class="content-box">
+            <div>
+                <h1 onclick="location.href='/WebProject/navigation-page.html'">c functions</h1>
+            </div>
+            <div class="navigation">
+                <div class="navi-child">
+                    <h2 class="navi-button" onclick="location.href='/WebProject/Sec4/1.html'">c Arrays</h2>
+                    <h2 class="navi-button" onclick="location.href='/WebProject/Sec4/2.html'">c Multidimensional Arrays</h2>
+                </div>
+                <div class="navi-child-forum">
+                    <h2 class="navi-button" onclick="location.href='/WebProject/Sec4/3.html'">c Arrays and functions</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
