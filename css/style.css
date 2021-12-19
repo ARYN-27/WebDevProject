@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Major+Mono+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
 
 /**
   * {
@@ -10,22 +10,15 @@
 html {
   font-family: "Open Sans", sans-serif;
   background-color: white;
-  /**
-  width: 100vw;
-  height: 100vh;
-  border-style: solid;
-  
-  background-color: #2AFADF; // fallback for old browsers
-  
-  background-image: linear-gradient( 135deg, #2AFADF 10%, #4C83FF 100%);
-  */
 }
 
 /**
   Navbar
 */
 .navbar {
-  font-size: 600;
+  /**
+    font-size: 600;
+  */
   background-color: white;
   border-radius: 5px 5px 5px 5px;
   /**
@@ -33,7 +26,12 @@ html {
   */
 }
 
+/**
+  Navigation Bar
+*/
+
 ul {
+  font-family: "Fira Code", monospace;
   list-style-type: none;
   display: flex;
   flex-direction: row;
@@ -66,32 +64,30 @@ ol a:hover {
 }
 
 /**
-  Font styling 
+  Intro Text
 */
-.intro {
-  font-family: "Major Mono Display", monospace;
-  height: 91vh;
-  width: 98vw;
+
+.intro-content {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.intro-text {
+  display: inline-flex;
   justify-content: center;
   align-items: center;
-
-  /**
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-  */
-  /**
-    text-align: center;
-    position: absolute;
-    font-size: large;
-    font-weight: 400;
-    top: 50%;
-    right: 50%;
-    transform: translate(-50%, -50%);
-    color: black;
-  */
+  align-content: center;
+  font-family: "Major Mono Display", monospace;
+  height: 19.4vh;
+  color: black;
+  width: 100%;
+  font-size: 60px;
 }
 
 .center {
@@ -103,22 +99,120 @@ ol a:hover {
 }
 
 .page-border {
-  /**
-    height: 100vh;
-    width: 100vh;
-    border: black;
-    border-width: 5px;
-  */
   position: fixed;
-
   top: 0;
   left: 0;
-
-  border: 14px solid;
-  border-color: linear-gradient(135deg, #2afadf 10%, #4c83ff 100%);
-  width: 100%;
-  height: 100%;
+  border: 15px solid;
+  width: 100vw;
+  height: 100vh;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border-image: linear-gradient(135deg, #2afadf 10%, #4c83ff 100%) 1;
 }
+
+.enter-button {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-29 {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0,#5adaff 0,#5468ff 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: "JetBrains Mono", monospace;
+  height: 48px;
+  width: 195px;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+}
+
+.enter-button:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.enter-button:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.enter-button:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+/** .enter-button 30 white 
+  .button-30 {
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+  }
+  
+  .button-30:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  }
+  
+  .button-30:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+  }
+  
+  .button-30:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+  }
+*/
