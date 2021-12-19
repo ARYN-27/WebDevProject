@@ -10,12 +10,15 @@
 html {
   font-family: "Open Sans", sans-serif;
   background-color: white;
+  /**
   width: 100vw;
   height: 100vh;
   border-style: solid;
-  background-color: #2AFADF; // fallback for old browsers
-  background-image: linear-gradient( 135deg, #2AFADF 10%, #4C83FF 100%);
   
+  background-color: #2AFADF; // fallback for old browsers
+  
+  background-image: linear-gradient( 135deg, #2AFADF 10%, #4C83FF 100%);
+  */
 }
 
 /**
@@ -100,8 +103,22 @@ ol a:hover {
 }
 
 .page-border {
-  height: 100vh;
-  width: 100vh;
-  border: black;
-  border-width: 5px;
+  /**
+    height: 100vh;
+    width: 100vh;
+    border: black;
+    border-width: 5px;
+  */
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  border: 14px solid;
+  border-color: linear-gradient(135deg, #2afadf 10%, #4c83ff 100%);
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
