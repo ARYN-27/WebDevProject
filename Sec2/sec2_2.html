@@ -27,7 +27,7 @@
         </ol>
         <br>
         We will learn about for loop in this tutorial. In the next tutorial, 
-        we will learn about while and do...while loop.
+        we will learn about while and <code>do...while</code> loop.
     </p>
 
     <h2>for Loop</h2>
@@ -60,22 +60,22 @@
 
 
     <h3>Example 1: for loop</h3>
-    <h5>
-        <p>
-            // Print numbers from 1 to 10<br>
-            #include <stdio.h><br>
+        <pre>
+            <p>// Print numbers from 1 to 10</p>
+            <code>#include &lt;stdio.h&gt;
 
-            int main() {<br>
-                int i;<br>
-                <br>
-                for (i = 1; i < 11; ++i)<br>
-            {<br>
-                printf("%d ", i);<br>
-            }<br>
-                return 0;<br>
-            }<br>
-        </p>
-    </h5>
+            int main() {
+                int i;
+                
+                for (i = 1; i < 11; ++i)
+            {
+                printf("%d ", i);
+            }
+                return 0;
+            }
+        </code>
+        </pre>
+    
 
     <h4>Output</h4>
     <h5>1 2 3 4 5 6 7 8 9 10</h5>
@@ -93,31 +93,31 @@
     </ol>
 
     <h3>Example 2: for loop</h3>
-        <h5>
+        <pre>
             <p>
                 // Program to calculate the sum of first n natural numbers<br>
                 // Positive integers 1,2,3...n are known as natural numbers<br>
-                <br>
-                #include <stdio.h><br>
-                int main()<br>
-                {<br>
-                    int num, count, sum = 0;<br>
-                    <br>
-                    printf("Enter a positive integer: ");<br>
-                    scanf("%d", &num);<br>
-                    <br>
-                    // for loop terminates when num is less than count<br>
-                    for(count = 1; count <= num; ++count)<br>
-                    {<br>
-                        sum += count;<br>
-                    }<br>
-                    <br>
-                    printf("Sum = %d", sum);<br>
-                    <br>
-                    return 0;<br>
-                }<br>
-        </p>
-    </h5>
+            </p>
+                <code>#include &lt;stdio.h&gt;
+                int main()
+                {
+                    int num, count, sum = 0;
+                    
+                    printf("Enter a positive integer: ");
+                    scanf("%d", &num);
+                    
+                    // for loop terminates when num is less than count
+                    for(count = 1; count <= num; ++count)
+                    {
+                        sum += count;
+                    }
+                    
+                    printf("Sum = %d", sum);
+                    
+                    return 0;
+                }
+            </code>
+            </pre>
 
     <h4>Output</h4>
     <h5>Enter a positive integer: 10<br>
@@ -152,7 +152,7 @@
          <br>Then, the value of sum is printed on the screen.
     </p>
 
-    <p>We will learn about while loop and do...while loop in the next tutorial.</p>
+    <p>We will learn about while loop and <code>do...while</code> loop in the next tutorial.</p>
 </div>
 </div>
 </div>
