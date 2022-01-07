@@ -112,23 +112,11 @@ ol a:hover {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border-image: linear-gradient(135deg, #2afadf 10%, #4c83ff 100%) 1;
   /**
     border-image: linear-gradient(135deg, #2afadf 10%, #4c83ff 100%) 1;
   */
 
-  border-image: linear-gradient(var(--angle), #12c2e9, #c471ed, #f64f59) 1;
-  animation: 5s rotate linear infinite;
-
-  @keyframes rotate {
-    to {
-      --angle: 360deg;
-    }
-  }
-  @property --angle {
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
-  }
 }
 
 
