@@ -1,9 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
     <title>C Language</title>
 </head>
 <body>
+    <div class="page-border">  <!--Use this to add page border around page-->
+        <div>
+            <div class="content-box">  <!--Use this to center content in the page so it won't hit the borders-->
     <h1>C break and continue</h1>
     <p><b>We learned about loops in previous tutorials. 
         In this tutorial, we will learn to use break and 
@@ -13,40 +21,41 @@
     <h2>C break</h2>
     <p>The break statement ends the loop immediately 
         when it is encountered. Its syntax is:</p>
-        <h5>break;</h5>
+        <code>break;</code>
         <p>The break statement is almost always used with
-            if...else statement inside the loop.</p>
+            <code>if...else</code> statement inside the loop.</p>
 
             <h3>How break statement works?</h3>
             <img src="img/sec2_4.png">
 
 
             <h3>Example 1: break statement</h3>
-            <h5>
+            <pre>
                 <p>
                     // Program to calculate the sum of numbers (10 numbers max)<br>
-                    // If the user enters a negative number, the loop terminates<br>
-                    #include <stdio.h><br>
+                    // If the user enters a negative number, the loop terminates<br></p>
+                    <code>
+                        #include &lt;stdio.h&gt;
         
-                    int main() {<br>
-                        int i;<br>
-                        double number, sum = 0.0;<br>
-                        <br>
-                        for (i = 1; i <= 10; ++i) {<br>
-                            printf("Enter n%d: ", i);<br>
-                            scanf("%lf", &number);<br>
-                    // if the user enters a negative number, break the loop<br>
-                    if (number < 0.0) {<br>
-                        break;<br>
-                    }<br>
-                    <br>
-                    sum += number; // sum = sum + number;<br>
-                }<br>
-                    printf("Sum = %.2lf", sum);<br>
-                    return 0;<br>
-                }<br>
-                </p>
-            </h5>
+                            int main() {
+                                int i;
+                                double number, sum = 0.0;
+                                
+                                for (i = 1; i <= 10; ++i) {
+                                    printf("Enter n%d: ", i);
+                                    scanf("%lf", &number);
+                            // if the user enters a negative number, break the loop
+                            if (number < 0.0) {
+                                break;
+                            }
+                            
+                            sum += number; // sum = sum + number;
+                        }
+                            printf("Sum = %.2lf", sum);
+                            return 0;
+                        }
+                    </code>
+                </pre>
         
             <h4>Output</h4>
             <h5>Enter n1: 2.4<br> 
@@ -70,39 +79,39 @@
             <p>The continue statement skips the current iteration of the loop and 
                 continues with the next iteration. Its syntax is:</p>
 
-                <h5>continue;</h5>
+                <code>continue;</code>
                 <p>The continue statement is almost 
-                    always used with the if...else statement.</p>
+                    always used with the <code>if...else</code> statement.</p>
 
                 <h3>How continue statement works?</h3>
                 <img src="img/sec2_4-1.png">
 
                 <h3>Example 2: continue statement</h3>
-                <h5>
+                <pre>
                     <p>
                         // Program to calculate the sum of numbers (10 numbers max)<br>
-                        // If the user enters a negative number, it's not added to the result<br>
-                        #include <stdio.h><br>
+                        // If the user enters a negative number, it's not added to the result</p>
+                        <code>#include &lt;stdio.h&gt;
             
-                        int main() {<br>
-                            int i;<br>
-                            double number, sum = 0.0;<br>
-                            <br>
-                            for (i = 1; i <= 10; ++i) {<br>
-                                printf("Enter n%d: ", i);<br>
-                                scanf("%lf", &number);<br>
+                        int main() {
+                            int i;
+                            double number, sum = 0.0;
+                            
+                            for (i = 1; i <= 10; ++i) {
+                                printf("Enter n%d: ", i);
+                                scanf("%lf", &number);
                         
-                        if (number < 0.0) {<br>
-                            continue;<br>
-                        }<br>
-                        <br>
-                        sum += number; // sum = sum + number;<br>
-                    }<br>
-                        printf("Sum = %.2lf", sum);<br>
-                        return 0;<br>
-                    }<br>
-                    </p>
-                </h5>
+                        if (number < 0.0) {
+                            continue;
+                        }
+                        
+                        sum += number; // sum = sum + number;
+                    }
+                        printf("Sum = %.2lf", sum);
+                        return 0;
+                    }
+                </code>
+            </pre>
             
                 <h4>Output</h4>
                 <h5>Enter n1: 1.1<br> 
@@ -124,5 +133,8 @@
                 When the user enters a negative number, the continue statement is executed and 
                 it skips the negative number from the calculation.
             </p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

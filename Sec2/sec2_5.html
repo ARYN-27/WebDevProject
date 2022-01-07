@@ -1,9 +1,17 @@
-<!DOCTYPE html>
-<html>
+DOCTYPE html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
     <title>C Language</title>
 </head>
 <body>
+    <div class="page-border">  <!--Use this to add page border around page-->
+        <div>
+            <div class="content-box">  <!--Use this to center content in the page so it won't hit the borders-->
     <h1>C switch Statement</h1>
     <p><b>In this tutorial, you will learn to create the switch 
         statement in C programming with the help of an example.</b>
@@ -18,7 +26,7 @@
     <h2>Syntax of switch...case</h2>
     <h5>
         switch (expression)<br>
-    ​{<br>
+    {<br>
     case constant1:<br>
       // statements<br>
       break;<br>
@@ -53,45 +61,45 @@
         <img src="img/sec2_5.png">
 
         <h3>Example: Simple Calculator</h3>
-        <h5>
-            // Program to create a simple calculator <br>
-#include <stdio.h><br>
-    <br>
-int main() {<br>
-    char operator;<br>
-    double n1, n2;<br>
-    <br>
-    printf("Enter an operator (+, -, *, /): ");<br>
-    scanf("%c", &operator);<br>
-    printf("Enter two operands: ");<br>
-    scanf("%lf %lf",&n1, &n2);<br>
-    <br>
-    switch(operator)<br>
-    {<br>
-        case '+':<br>
-            printf("%.1lf + %.1lf = %.1lf",n1, n2, n1+n2);<br>
-            break;<br>
-            <br>
-        case '-':<br>
-            printf("%.1lf - %.1lf = %.1lf",n1, n2, n1-n2);<br>
-            break;<br>
-            <br>
-        case '*':<br>
-            printf("%.1lf * %.1lf = %.1lf",n1, n2, n1*n2);<br>
-            break;<br>
+        <pre>
+            <p>// Program to create a simple calculator</p>
+            <code>#include &lt;stdio.h&gt;
 
-        case '/':<br>
-            printf("%.1lf / %.1lf = %.1lf",n1, n2, n1/n2);<br>
-            break;<br>
+            int main() {
+                char operator;
+                double n1, n2;
+                
+                printf("Enter an operator (+, -, *, /): ");
+                scanf("%c", &operator);
+                printf("Enter two operands: ");
+                scanf("%lf %lf",&n1, &n2);
+                
+                switch(operator)
+                {
+                    case '+':
+                        printf("%.1lf + %.1lf = %.1lf",n1, n2, n1+n2);
+                        break;
+                        
+                    case '-':
+                        printf("%.1lf - %.1lf = %.1lf",n1, n2, n1-n2);
+                        break;
+                        
+                    case '*':
+                        printf("%.1lf * %.1lf = %.1lf",n1, n2, n1*n2);
+                        break;
 
-        // operator doesn't match any case constant +, -, *, /<br>
-        default:<br>
-            printf("Error! operator is not correct");<br>
-    }<br>
-    <br>
-    return 0;<br>
-}<br>
-        </h5>
+                    case '/':
+                        printf("%.1lf / %.1lf = %.1lf",n1, n2, n1/n2);
+                        break;
+
+                    // operator doesn't match any case constant +, -, *, /
+                    default:
+                        printf("Error! operator is not correct");
+                }
+                
+                return 0;
+            }</code>
+        </pre>
 
         <h4>Output</h4>
         <h5>
@@ -107,7 +115,10 @@ int main() {<br>
             <br>
             <br>Since the operator is -, the control of the program jumps to
         </p>
-        <h5>printf("%.1lf - %.1lf = %.1lf", n1, n2, n1-n2);</h5>
+        <h5><code>printf("%.1lf - %.1lf = %.1lf", n1, n2, n1-n2);</code></h5>
         <p>Finally, the <a href="#">break statement</a>terminates the switch statement.</p>
+        </div>
+    </div>
+    </div>
 </body>
 </html>

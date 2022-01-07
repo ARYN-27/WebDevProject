@@ -1,9 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
     <title>C Language</title>
 </head>
 <body>
+    <div class="page-border">  <!--Use this to add page border around page-->
+        <div>
+            <div class="content-box">  <!--Use this to center content in the page so it won't hit the borders-->
     <h1>C Functions</h1>
     <h3><b>In this tutorial, you will be introduced to functions (both user-defined and standard library functions) in C programming. Also, you will learn why functions are used in programming.</b></h3>
 
@@ -38,7 +46,7 @@
         <p>You can also create functions as per your need. Such functions created by the user are known as user-defined functions.</p>
 
         <h2>How user-defined function works?</h2>
-        <p>#include <stdio.h>
+        <code>#include &lt;stdio.h&gt;
             void functionName()
             <br>{
                 <br>... .. ...
@@ -54,11 +62,11 @@
                 
                 <br>... .. ...
                 <br>... .. ...
-                <br>}</p>
+                <br>}</code>
 
             <br><p>The execution of a C program begins from the main() function.
                 <br>When the compiler encounters functionName();, control of the program jumps to</p>
-                <h4> void functionName()</h4>
+                <code>void functionName()</code>
 
                 <p>And, the compiler starts executing the codes inside functionName().
                     <br><br>The control of the program jumps back to the main() function once code inside the function definition is executed.
@@ -76,5 +84,8 @@
                         <li>Reusable codes that can be used in other programs</li>
                         <li>A large program can be divided into smaller modules. Hence, a large project can be divided among many programmers.</li>
                     </ol></p>
+                    </div>
+                </div>
+            </div>
 </body>
 </html>
