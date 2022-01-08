@@ -10,7 +10,8 @@
 </head>
 <body>
 <h1>My forum</h1>
-	<div id="wrapper">
+	<div class ="page-border">
+		<div id="wrapper">
 	<div id="menu">
 		<a class="item" href="index.php">Home</a> -
 		
