@@ -1,47 +1,34 @@
-<meta content="" name="descriptison">
-  <meta content="" name="keywords">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="nl" lang="nl">
 
-  
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="A short description." />
+	<meta name="keywords" content="put, keywords, here" />
+	<title>Forum</title>
+	<link rel="stylesheet" href="style.css" type="text/css">
+</head>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-    <link rel="stylesheet" href="assets/font-awesome/css/all.min.css">
+<body>
 
+	<div class="page-border">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
-  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
-  <link href="assets/DataTables/datatables.min.css" rel="stylesheet">
-  <link href="assets/css/jquery.datetimepicker.min.css" rel="stylesheet">
-  <link href="assets/css/select2.min.css" rel="stylesheet">
-  <link href="assets/css/PagingStyle.css" rel="stylesheet">
+		<div class="intro-box">
+			<h1 class="intro-text">my forum</h1>
+		</div>
+		<div id="wrapper">
+			<div id="menu">
+				<a class="item" href="index.php">Home</a> -
 
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-  <link type="text/css" rel="stylesheet" href="assets/css/jquery-te-1.4.0.css">
-  
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <script src="assets/DataTables/datatables.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/venobox/venobox.min.js"></script>
-  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-  <script src="assets/vendor/counterup/counterup.min.js"></script>
-  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
-    <script type="text/javascript" src="assets/js/select2.min.js"></script>
-    <script type="text/javascript" src="assets/js/jquery.datetimepicker.full.min.js"></script>
-    <script type="text/javascript" src="assets/font-awesome/js/all.min.js"></script>
-  <script type="text/javascript" src="assets/js/jquery-te-1.4.0.min.js" charset="utf-8"></script>
-  <script type="text/javascript" src="assets/js/paging.js" charset="utf-8"></script>
-
-
-
+				<?php
+				if (isset($_SESSION['signed_in']) and $_SESSION['signed_in'] == True) {
+					echo '<a class="item" href="create_topic.php">Create a topic</a> -';
+					echo '<a class="item" href="create_cat.php">Create a category</a> -';
+					echo 'Hello <b>' . $_SESSION['user_name'] . '</b>. Not you? - <a class="item" href="signout.php">Sign out</a>';
+				} else {
+					echo '<a class="item" href="signin.php">Sign in</a> or <a class="item" href="signup.php">create an account</a>';
+				}
+				?>
+			</div>
+			<div id="content">
