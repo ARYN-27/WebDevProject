@@ -8,7 +8,7 @@ echo '<font style="font-size: 18px;">Sign in</font><br><br>';
 //first, check if the user is already signed in. If that is the case, there is no need to display this page
 if(isset($_SESSION['signed_in']) && $_SESSION['signed_in'] == true)
 {
-	echo '<br><font style="font-size: 14px;">You are already signed in, you can <a href="signout.php">sign out</a> if you want.</font><br><br>';
+	echo '<br><font style="font-size: 14px;">You are already signed in.</font><br><br>';
 }
 else
 {
@@ -19,7 +19,7 @@ else
 		echo '<form method="post" action="">
 			<font style="font-size: 14px;">Username: </font><input type="text" name="user_name"></input><br><br>
 			<font style="font-size: 14px;">Password: </font><input type="password" name="user_pass"></input><br><br>
-			<input type="submit" value="Sign in"></input>
+			<input id="item" type="submit" value="sign in"></input>
 		 </form>';
 	}
 	else
@@ -43,7 +43,7 @@ else
 		
 		if(!empty($errors)) /*check for an empty array, if there are errors, they're in this array (note the ! operator)*/
 		{
-			echo '<br><font style="font-size: 14px;">Uh-oh.. a couple of fields are not filled in correctly..</font><br><br>';
+			echo '<br><font style="font-size: 14px;">fields are not filled in correctly..</font><br><br>';
 			echo '<ul>';
 			foreach($errors as $key => $value) /* walk through the array so all the errors get displayed */
 			{

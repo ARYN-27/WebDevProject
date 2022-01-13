@@ -18,7 +18,7 @@ else
 		echo '<form method="post" action="">
 			<br><font style="font-size: 14px;">Category name: </font><input type="text" name="cat_name" /><br><br>
 			<font style="font-size: 14px;">Category description:</font><br><textarea style="resize:none;" name="cat_description" rows="10" cols="70" wrap="hard"></textarea><br /><br />
-			<input type="submit" value="Add category" />
+			<input type="submit" value="add category" id="item"/>
 		 </form>';
 	}
 	else

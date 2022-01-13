@@ -78,7 +78,7 @@ else
 				echo '<tr><td colspan="2"><font style="font-size: 18px;">Reply:</font><br>';
 			    echo '<form method="post" action="reply.php?id=' . $row['topic_id'] . '">';
 				echo '<textarea style="resize:none;" name="reply-content" rows="10" cols="70" wrap="pyhsical"></textarea><br /><br />';
-				echo '<input type="submit" value="Submit reply" />';
+				echo '<input type="submit" value="submit reply" id="item"/>';
 				echo '</form></td></tr>';
 			}
 			

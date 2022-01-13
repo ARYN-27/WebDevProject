@@ -51,7 +51,7 @@ else
 					<br><font style="font-size: 14px;">Subject: </font><input type="text" name="topic_subject" /><br><br>
 					<font style="font-size: 14px;">Category:</font>'; 
 				
-				echo '<select name="topic_cat">';
+				echo '<select name="topic_cat" id="item2">';
 					while($row = mysqli_fetch_assoc($result))
 					{
 						echo '<option value="' . $row['cat_id'] . '">' . $row['cat_name'] . '</option>';
@@ -59,7 +59,7 @@ else
 				echo '</select><br><br>';	
 					
 				echo '<font style="font-size: 14px;">Message: </font><br><textarea style="resize:none;" name="post_content" rows="10" cols="70" wrap="hard"></textarea><br /><br />
-					<input type="submit" value="Create topic" />
+					<input type="submit" value="create topic" id="item" />
 				 </form>';
 			}
 		}

@@ -16,19 +16,33 @@
 		<div class="intro-box">
 			<h1 class="intro-text">my forum</h1>
 		</div>
-		<div id="wrapper">
-			<div id="menu">
-				<a class="item" href="index.php">Home</a> -
+		<div class="container">
+			<div id="wrapper">
+				<div id="menu">
+					<div class="menu-left">
+						<a id="item" href="index.php">home</a>
 
+						<?php
+						if (isset($_SESSION['signed_in']) and $_SESSION['signed_in'] == True) {
+							echo '<a id="item" href="create_topic.php">create topic</a>  ';
+							echo '<a id="item" href="create_cat.php">create category</a>';
+						} else {
+						}
+						?>
+					</div>
 
-				<?php
-				if (isset($_SESSION['signed_in']) and $_SESSION['signed_in'] == True) {
-					echo '<a class="item" href="create_topic.php">Create a topic</a> -';
-					echo '<a class="item" href="create_cat.php">Create a category</a> -';
-					echo 'Hello <b>' . $_SESSION['user_name'] . '</b>. Not you? - <a class="item" href="signout.php">Sign out</a>';
-				} else {
-					echo '<a class="item" href="signin.php">Sign in</a> or <a class="item" href="signup.php">create an account</a>';
-				}
-				?>
-			</div>
-			<div id="content">
+					<div class="menu-right">
+						<?php
+						if (isset($_SESSION['signed_in']) and $_SESSION['signed_in'] == True) {
+
+							echo '<div class="logged-user">welcome, ' . $_SESSION['user_name'] . '</div>'. '</b> <a id="item" href="signout.php">sign out</a>';
+						} else {
+							echo '<a id="item" href="signin.php">sign in</a> <a id="item" href="signup.php">create account</a>';
+						}
+						?>
+					</div>
+
+				</div>
+				<div id="content">
+					
+				
