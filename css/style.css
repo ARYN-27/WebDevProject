@@ -495,3 +495,7 @@ code {
 .qr-box:hover {
   border-color: aquamarine;
 }
+
+.qr-h1{
+  text-align: center;
+}
