@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-
-</head>
-
-<body>
     <?php
     // Google Charts Documentation: https://developers.google.com/chart/infographics/docs/qr_codes?csw=1#overview
 
@@ -13,7 +6,7 @@
     $cht = "qr";
 
     // Chart Size
-    $chs = "200x200";
+    $chs = "98x98";
 
     // Chart Link
     // the url-encoded string you want to change into a QR code
@@ -24,9 +17,6 @@
 
     $qrcode = 'https://chart.googleapis.com/chart?cht=' . $cht . '&chs=' . $chs . '&chl=' . $chl . '&choe=' . $choe;
 
+    echo "<img src='$qrcode' alt='My QR code'/>";
     ?>
 
-    <img src="<?php echo $qrcode ?>" alt="My QR code">
-</body>
-
-</html>
