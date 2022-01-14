@@ -7,55 +7,174 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style.css" />
     <title>C Language</title>
+
+    <style>
+        h1 {
+            font-family: "Major Mono Display";
+            text-align: center;
+        }
+
+        h2 {
+            font-family: "Source Sans Pro";
+            text-decoration: underline;
+            text-decoration-color: lightgrey;
+            text-decoration-thickness: 3px;
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid #06f;
+            text-align: left;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 60%;
+        }
+
+        th,
+        td {
+            padding: 8px;
+        }
+    </style>
+
+    <script src="../QR_V3/qr.min.js"></script>
 </head>
+
 <body>
-    <div class="page-border">  <!--Use this to add page border around page-->
+    <div class="page-border">
+        <!--Use this to add page border around page-->
         <div>
-            <div class="content-box">  <!--Use this to center content in the page so it won't hit the borders-->
-    <h1>C while and do...while Loop</h1>
-    <p><b>In this tutorial, you will learn to create while and do...while loop
-        in C programming with the help of examples.</b>
-    </p>
-    <p>In programming, loops are used to repeat a 
-    block of code until a specified condition is met. <br>
-<br>
-    C programming has three types of loops.</p>
-    <ol>
-        <li>
-            for loop
-        </li>
-        <li>while loop</li>
-        <li>do...while loop</li>
-    </ol>
-</p>
+            <div class="mini-nav">
+                <h1>c introduction</h1>
+                <div class="mini-nav-functions">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" width="40"
+                        fill="currentColor" onclick="location.href='#demo-modal'">
+                        <path fill-rule="evenodd"
+                            d="M3 4a1 1 0 011-1h3a1 1 0 011 1v3a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm2 2V5h1v1H5zM3 13a1 1 0 011-1h3a1 1 0 011 1v3a1 1 0 01-1 1H4a1 1 0 01-1-1v-3zm2 2v-1h1v1H5zM13 3a1 1 0 00-1 1v3a1 1 0 001 1h3a1 1 0 001-1V4a1 1 0 00-1-1h-3zm1 2v1h1V5h-1z"
+                            clip-rule="evenodd" />
+                        <path
+                            d="M11 4a1 1 0 10-2 0v1a1 1 0 002 0V4zM10 7a1 1 0 011 1v1h2a1 1 0 110 2h-3a1 1 0 01-1-1V8a1 1 0 011-1zM16 9a1 1 0 100 2 1 1 0 000-2zM9 13a1 1 0 011-1h1a1 1 0 110 2v2a1 1 0 11-2 0v-3zM7 11a1 1 0 100-2H4a1 1 0 100 2h3zM17 13a1 1 0 01-1 1h-2a1 1 0 110-2h2a1 1 0 011 1zM16 17a1 1 0 100-2h-3a1 1 0 100 2h3z" />
+                    </svg>
+                    <svg class="navi-home" xmlns="http://www.w3.org/2000/svg" viewBox="-2 -1.5 24 24" width="40"
+                        fill="currentColor" onclick="location.href='/WebProject/navigation-page.html'">
+                        <path
+                            d="M13 20.565v-5a3 3 0 0 0-6 0v5H2a2 2 0 0 1-2-2V7.697a2 2 0 0 1 .971-1.715l8-4.8a2 2 0 0 1 2.058 0l8 4.8A2 2 0 0 1 20 7.697v10.868a2 2 0 0 1-2 2h-5z">
+                        </path>
+                    </svg>
+                    <svg class="navi-home" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                        width="40" fill="currentColor" onclick="location.href='../forum/index.php'">
+                        <path fill-rule="evenodd"
+                            d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+            </div>
 
-<p>
-    In the previous tutorial, we learned about for loop. 
-    In this tutorial, we will learn about while and do..while loop.
-</p>
+            <!--Dynamic QR Code-->
+            <div id="demo-modal" class="modal">
+                <div class="modal__content">
+                    <h1>share your code</h1>
 
-    <h2>while loop</h2>
-    <p>The syntax of the while loop is:</p>
-    <h5>
-        while (testExpression) {<br>
-            // the body of the loop <br>
-          }
-    </h5>
+                    <form>
+                        <input type="url" id="website" name="website" placeholder="copy and paste" required
+                            class="qr-box" />
+                        <button type="button" onclick="generateQRCode()" class="item2">
+                            GENERATE
+                        </button>
+                    </form>
 
-    <h3>How while loop works?</h3>
-    <li>The while loop evaluates the testExpression inside the parentheses ().</li>
-    <li>If testExpression is true, statements inside the body of while loop are executed. 
-        Then, testExpression is evaluated again.</li>
-    <li>The process goes on until testExpression is evaluated to false.</li>
-    <li>If testExpression is false, the loop terminates (ends).</li>
-    <p>To learn more about test expression (when the test expression is evaluated to true and false), 
-    check out <a href="#">relational</a> and <a href="#">logical operators.</a></p>
+                    <div id="qrcode-container">
+                        <div id="qrcode" class="qrcode"></div>
+                    </div>
 
-    <h3>Flowchart of while loop</h3>
-    <img src="img/sec2_3.png">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="navi-home" viewBox="0 0 20 20" fill="currentColor"
+                        width="50" onclick="location.href='#'">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                            clip-rule="evenodd" />
+                    </svg>
 
-    <h3>Example 1: while loop</h3>
-    <pre>
+                    <script type="text/javascript">
+                        function generateQRCode() {
+                            let website = document.getElementById("website").value;
+                            if (website) {
+                                let qrcodeContainer = document.getElementById("qrcode");
+                                qrcodeContainer.innerHTML = "";
+                                new QRCode(qrcodeContainer, website);
+                                /*With some styles*/
+                                /**
+                                    
+                                    let qrcodeContainer2 = document.getElementById("qrcode-2");
+                                    qrcodeContainer2.innerHTML = "";
+                                    new QRCode(qrcodeContainer2, {
+                                        text: website,
+                                        width: 128,
+                                        height: 128,
+                                        colorDark: "#5868bf",
+                                        colorLight: "#ffffff",
+                                        correctLevel: QRCode.CorrectLevel.H
+                                    });
+                                */
+                                document.getElementById("qrcode-container").style.display = "block";
+                            } else {
+                                alert("Please enter a valid URL");
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+            <!---------------------------------- Dynamic QR Code - END --------------------------------------------->
+            <div class="content-box">
+                <!--Use this to center content in the page so it won't hit the borders-->
+                <h1>c while and do...while loop</h1>
+                <p><b>In this tutorial, you will learn to create while and do...while loop
+                        in C programming with the help of examples.</b>
+                </p>
+                <p>In programming, loops are used to repeat a
+                    block of code until a specified condition is met. <br>
+                    <br>
+                    C programming has three types of loops.
+                </p>
+                <ol>
+                    <li>
+                        for loop
+                    </li>
+                    <li>while loop</li>
+                    <li>do...while loop</li>
+                </ol>
+                <br>
+                <br>
+                <br>
+                <br>
+                <p>
+                    In the previous tutorial, we learned about for loop.
+                    In this tutorial, we will learn about while and do..while loop.
+                </p>
+
+                <h2>while loop</h2>
+                <p>The syntax of the while loop is:</p>
+                <h5>
+                    while (testExpression) {<br>
+                    // the body of the loop <br>
+                    }
+                </h5>
+
+                <h3>How while loop works?</h3>
+                <li>The while loop evaluates the testExpression inside the parentheses ().</li>
+                <li>If testExpression is true, statements inside the body of while loop are executed.
+                    Then, testExpression is evaluated again.</li>
+                <li>The process goes on until testExpression is evaluated to false.</li>
+                <li>If testExpression is false, the loop terminates (ends).</li>
+                <p>To learn more about test expression (when the test expression is evaluated to true and false),
+                    check out <a href="#">relational</a> and <a href="#">logical operators.</a></p>
+
+                <h3>Flowchart of while loop</h3>
+                <img src="img/sec2_3.png">
+
+                <h3>Example 1: while loop</h3>
+                <pre>
         <p>// Print numbers from 1 to 5</p>
         <code>
                 #include &lt;stdio.h&gt;
@@ -72,49 +191,49 @@
         </code>
     </pre>
 
-    <h4>Output</h4>
-    <h5>1 <br> 2 <br>3<br> 4<br> 5</h5>
-    <p>
-        Here, we have initialized i to 1.
-        <ol>
-            <li>When i = 1, the test expression <code>i <= 5</code> is true. Hence, 
-                the body of the while loop is executed. This prints 1 
-                on the screen and the value of i is increased to 2.</li>
-                <li>Now, i = 2, the test expression <code>i <= 5</code> is again true. 
-                    The body of the while loop is executed again. This prints 
-                    2 on the screen and the value of i is increased to 3.</li>
-                <li>This process goes on until i becomes 6. Then, the test 
-                    expression <code>i <= 5</code> will be false and the loop terminates.</li>
-        </ol>
-    </p>
+                <h4>Output</h4>
+                <h5>1 <br> 2 <br>3<br> 4<br> 5</h5>
+                <p>
+                    Here, we have initialized i to 1.
+                <ol>
+                    <li>When i = 1, the test expression <code>i <= 5</code> is true. Hence,
+                        the body of the while loop is executed. This prints 1
+                        on the screen and the value of i is increased to 2.</li>
+                    <li>Now, i = 2, the test expression <code>i <= 5</code> is again true.
+                        The body of the while loop is executed again. This prints
+                        2 on the screen and the value of i is increased to 3.</li>
+                    <li>This process goes on until i becomes 6. Then, the test
+                        expression <code>i <= 5</code> will be false and the loop terminates.</li>
+                </ol>
+                </p>
 
-    <h3>do...while loop</h3>
-    <p>The do..while loop is similar to the while loop with one 
-        important difference. The body of do...while loop is 
-        executed at least once. 
-        Only then, the test expression is evaluated.</p>
+                <h3>do...while loop</h3>
+                <p>The do..while loop is similar to the while loop with one
+                    important difference. The body of do...while loop is
+                    executed at least once.
+                    Only then, the test expression is evaluated.</p>
 
-        <p>The syntax of the do...while loop is:</p>
-        <h5>do {<br>
-            // the body of the loop<br>
-          }<br>
-          while (testExpression);</h5>
+                <p>The syntax of the do...while loop is:</p>
+                <h5>do {<br>
+                    // the body of the loop<br>
+                    }<br>
+                    while (testExpression);</h5>
 
-          <h3>How do...while loop works?</h3>
-          <li>The body of do...while loop is executed once. 
-              Only then, the testExpression is evaluated.</li>
-          <li>If testExpression is <b>true</b>, the body of the loop is executed 
-              again and testExpression is evaluated once more.</li>
-          <li>This process goes on until testExpression becomes <b>false.</b></li>
-          <li>If testExpression is <b>false</b>, the loop ends.</li>
-          
-          <h3>
-            Flowchart of do...while Loop
-          </h3>
-          <img src="img/sec2_3-1.png">
+                <h3>How do...while loop works?</h3>
+                <li>The body of do...while loop is executed once.
+                    Only then, the testExpression is evaluated.</li>
+                <li>If testExpression is <b>true</b>, the body of the loop is executed
+                    again and testExpression is evaluated once more.</li>
+                <li>This process goes on until testExpression becomes <b>false.</b></li>
+                <li>If testExpression is <b>false</b>, the loop ends.</li>
 
-          <h3>Example 2: do...while loop</h3>
-          <pre>
+                <h3>
+                    Flowchart of do...while Loop
+                </h3>
+                <img src="img/sec2_3-1.png">
+
+                <h3>Example 2: do...while loop</h3>
+                <pre>
               <p>// Program to add numbers until the user enters zero</p>
                 <code>#include &lt;stdio.h&gt;
                 int main() {
@@ -134,30 +253,30 @@
                 }
             </code>
         </pre>
-          <h4>Output</h4>
-          <h5>
-            Enter a number: 1.5<br>
-            Enter a number: 2.4<br>
-            Enter a number: -3.4<br>
-            Enter a number: 4.2<br>
-            Enter a number: 0<br>
-            Sum = 4.70<br>
-          </h5>
+                <h4>Output</h4>
+                <h5>
+                    Enter a number: 1.5<br>
+                    Enter a number: 2.4<br>
+                    Enter a number: -3.4<br>
+                    Enter a number: 4.2<br>
+                    Enter a number: 0<br>
+                    Sum = 4.70<br>
+                </h5>
 
-          <p>
-            Here, we have used a do...while loop to prompt the user 
-            to enter a number. The loop works as long as the 
-            input number is not 0.
-            
-          </p>
-          <p>
-            The <code>do...while</code> loop executes at least once i.e. 
-            the first iteration runs without checking the condition. 
-            The condition is checked only after the first 
-            iteration has been executed.
-          </p>
+                <p>
+                    Here, we have used a do...while loop to prompt the user
+                    to enter a number. The loop works as long as the
+                    input number is not 0.
 
-          <pre>
+                </p>
+                <p>
+                    The <code>do...while</code> loop executes at least once i.e.
+                    the first iteration runs without checking the condition.
+                    The condition is checked only after the first
+                    iteration has been executed.
+                </p>
+
+                <pre>
             <code>
                 do {
                     printf("Enter a number: ");
@@ -168,20 +287,21 @@
             </code>
         </pre>
 
-          <p>So, if the first input is a non-zero number,
-              that number is added to the sum variable 
-              and the loop continues to the next iteration. 
-              This process is repeated until the user enters 0.
-            </p>
+                <p>So, if the first input is a non-zero number,
+                    that number is added to the sum variable
+                    and the loop continues to the next iteration.
+                    This process is repeated until the user enters 0.
+                </p>
 
-            <p>
-                But if the first input is 0, there will be no second iteration of the loop and sum becomes 0.0.
-                <br>
-                <br>Outside the loop, we print the value of sum.
-            </p>
+                <p>
+                    But if the first input is 0, there will be no second iteration of the loop and sum becomes 0.0.
+                    <br>
+                    <br>Outside the loop, we print the value of sum.
+                </p>
             </div>
         </div>
     </div>
-            
+
 </body>
+
 </html>

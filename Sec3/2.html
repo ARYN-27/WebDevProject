@@ -7,29 +7,147 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style.css" />
     <title>C Language</title>
+
+    <style>
+        h1 {
+            font-family: "Major Mono Display";
+            text-align: center;
+        }
+
+        h2 {
+            font-family: "Source Sans Pro";
+            text-decoration: underline;
+            text-decoration-color: lightgrey;
+            text-decoration-thickness: 3px;
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid #06f;
+            text-align: left;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 60%;
+        }
+
+        th,
+        td {
+            padding: 8px;
+        }
+    </style>
+
+    <script src="../QR_V3/qr.min.js"></script>
 </head>
+
 <body>
-    <div class="page-border">  <!--Use this to add page border around page-->
+    <div class="page-border">
+        <!--Use this to add page border around page-->
         <div>
-            <div class="content-box">  <!--Use this to center content in the page so it won't hit the borders-->
-    <h1>C User-defined functions</h1>
-    <p><b>In this tutorial, you will learn to create user-defined functions in C programming with the help of an example.</b></p>
-    <p>In this tutorial, you will learn to create user-defined functions in
-        C programming with the help of an example.<br>
-        C allows you to define functions according to your need. These functions 
-        are known as user-defined functions. For example:
-    <br>Suppose, you need to create a circle and color it depending upon the radius and color.
-    You can create two functions to solve this problem:</p>
-    <p>
-        <li>createCircle() function</li>
-        <li>color() function</li>
-    </p>
+            <div class="mini-nav">
+                <h1>c introduction</h1>
+                <div class="mini-nav-functions">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" width="40"
+                        fill="currentColor" onclick="location.href='#demo-modal'">
+                        <path fill-rule="evenodd"
+                            d="M3 4a1 1 0 011-1h3a1 1 0 011 1v3a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm2 2V5h1v1H5zM3 13a1 1 0 011-1h3a1 1 0 011 1v3a1 1 0 01-1 1H4a1 1 0 01-1-1v-3zm2 2v-1h1v1H5zM13 3a1 1 0 00-1 1v3a1 1 0 001 1h3a1 1 0 001-1V4a1 1 0 00-1-1h-3zm1 2v1h1V5h-1z"
+                            clip-rule="evenodd" />
+                        <path
+                            d="M11 4a1 1 0 10-2 0v1a1 1 0 002 0V4zM10 7a1 1 0 011 1v1h2a1 1 0 110 2h-3a1 1 0 01-1-1V8a1 1 0 011-1zM16 9a1 1 0 100 2 1 1 0 000-2zM9 13a1 1 0 011-1h1a1 1 0 110 2v2a1 1 0 11-2 0v-3zM7 11a1 1 0 100-2H4a1 1 0 100 2h3zM17 13a1 1 0 01-1 1h-2a1 1 0 110-2h2a1 1 0 011 1zM16 17a1 1 0 100-2h-3a1 1 0 100 2h3z" />
+                    </svg>
+                    <svg class="navi-home" xmlns="http://www.w3.org/2000/svg" viewBox="-2 -1.5 24 24" width="40"
+                        fill="currentColor" onclick="location.href='/WebProject/navigation-page.html'">
+                        <path
+                            d="M13 20.565v-5a3 3 0 0 0-6 0v5H2a2 2 0 0 1-2-2V7.697a2 2 0 0 1 .971-1.715l8-4.8a2 2 0 0 1 2.058 0l8 4.8A2 2 0 0 1 20 7.697v10.868a2 2 0 0 1-2 2h-5z">
+                        </path>
+                    </svg>
+                    <svg class="navi-home" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                        width="40" fill="currentColor" onclick="location.href='../forum/index.php'">
+                        <path fill-rule="evenodd"
+                            d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+            </div>
 
-    <h2>Example: User-defined function</h2>
-    <p>Here is an example to add two integers. To perform this task, 
-        we have created an user-defined <code>addNumbers()</code>.</p>
+            <!--Dynamic QR Code-->
+            <div id="demo-modal" class="modal">
+                <div class="modal__content">
+                    <h1>share your code</h1>
 
-        <pre>
+                    <form>
+                        <input type="url" id="website" name="website" placeholder="copy and paste" required
+                            class="qr-box" />
+                        <button type="button" onclick="generateQRCode()" class="item2">
+                            GENERATE
+                        </button>
+                    </form>
+
+                    <div id="qrcode-container">
+                        <div id="qrcode" class="qrcode"></div>
+                    </div>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="navi-home" viewBox="0 0 20 20" fill="currentColor"
+                        width="50" onclick="location.href='#'">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                            clip-rule="evenodd" />
+                    </svg>
+
+                    <script type="text/javascript">
+                        function generateQRCode() {
+                            let website = document.getElementById("website").value;
+                            if (website) {
+                                let qrcodeContainer = document.getElementById("qrcode");
+                                qrcodeContainer.innerHTML = "";
+                                new QRCode(qrcodeContainer, website);
+                                /*With some styles*/
+                                /**
+                                    
+                                    let qrcodeContainer2 = document.getElementById("qrcode-2");
+                                    qrcodeContainer2.innerHTML = "";
+                                    new QRCode(qrcodeContainer2, {
+                                        text: website,
+                                        width: 128,
+                                        height: 128,
+                                        colorDark: "#5868bf",
+                                        colorLight: "#ffffff",
+                                        correctLevel: QRCode.CorrectLevel.H
+                                    });
+                                */
+                                document.getElementById("qrcode-container").style.display = "block";
+                            } else {
+                                alert("Please enter a valid URL");
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+            <!---------------------------------- Dynamic QR Code - END --------------------------------------------->
+            <div class="content-box">
+                <!--Use this to center content in the page so it won't hit the borders-->
+                <h1>c user-defined functions</h1>
+                <p><b>In this tutorial, you will learn to create user-defined functions in C programming with the help
+                        of an example.</b></p>
+                <p>In this tutorial, you will learn to create user-defined functions in
+                    C programming with the help of an example.<br>
+                    C allows you to define functions according to your need. These functions
+                    are known as user-defined functions. For example:
+                    <br>Suppose, you need to create a circle and color it depending upon the radius and color.
+                    You can create two functions to solve this problem:
+                </p>
+                <p>
+                    <li>createCircle() function</li>
+                    <li>color() function</li>
+                </p>
+
+                <h2>Example: User-defined function</h2>
+                <p>Here is an example to add two integers. To perform this task,
+                    we have created an user-defined <code>addNumbers()</code>.</p>
+
+                <pre>
             <code>#include &lt;stdio.h&gt;
                 int addNumbers(int a, int b);         // function prototype
                 
@@ -55,85 +173,94 @@
             </code>
             </pre>
 
-        <h2>Function prototype</h2>
-        <p>A function prototype is simply the declaration of a function that 
-            specifies function's name, parameters and return type. 
-            It doesn't contain function body.A function prototype gives information to
-            the compiler that the function may later be used in the program.<br></p>
+                <h2>Function prototype</h2>
+                <p>A function prototype is simply the declaration of a function that
+                    specifies function's name, parameters and return type.
+                    It doesn't contain function body.A function prototype gives information to
+                    the compiler that the function may later be used in the program.<br></p>
 
 
-        <h2>Syntax of function prototype</h2>
-        <h5>returnType functionName(type1 argument1, type2 argument2, ...);</h5>
+                <h2>Syntax of function prototype</h2>
+                <h5>returnType functionName(type1 argument1, type2 argument2, ...);</h5>
 
-        <br><p>In the above example, <code>int addNumbers(int a, int b);</code> is the function prototype which 
-            provides the following information to the compiler:</p>
+                <br>
+                <p>In the above example, <code>int addNumbers(int a, int b);</code> is the function prototype which
+                    provides the following information to the compiler:</p>
 
-            <ol>
-                <li>name of the function is <code>addNumbers()</code></li>
-                <li>return type of the function is int</li>
-                <li>two arguments of type int are passed to the function</li>
-            </ol>
-        <p>The function prototype is not needed if the user-defined function 
-            is defined before the <code>main()</code> function.</p>
+                <ol>
+                    <li>name of the function is <code>addNumbers()</code></li>
+                    <li>return type of the function is int</li>
+                    <li>two arguments of type int are passed to the function</li>
+                </ol>
+                <p>The function prototype is not needed if the user-defined function
+                    is defined before the <code>main()</code> function.</p>
 
-        <h2>Calling a function</h2>
-        <p>Control of the program is transferred 
-            to the user-defined function by calling it.
-        </p>
+                <h2>Calling a function</h2>
+                <p>Control of the program is transferred
+                    to the user-defined function by calling it.
+                </p>
 
-        <h3>Syntax of function call</h3>
-        <h5>functionName(argument1, argument2, ...);</h5>
-        <p>In the above example, the function call is made using 
-            <code>addNumbers(n1, n2);</code> statement inside the <code>main()</code> function.
-        </p>
+                <h3>Syntax of function call</h3>
+                <h5>functionName(argument1, argument2, ...);</h5>
+                <p>In the above example, the function call is made using
+                    <code>addNumbers(n1, n2);</code> statement inside the <code>main()</code> function.
+                </p>
 
-        <h2>Function definition</h2>
-        <p>Function definition contains the block of code to perform a specific task. 
-            In our example, adding two numbers and returning it.</p>
+                <h2>Function definition</h2>
+                <p>Function definition contains the block of code to perform a specific task.
+                    In our example, adding two numbers and returning it.</p>
 
-            <h3>Syntax of function definition</h3>
-            <h5>returnType functionName(type1 argument1, type2 argument2, ...)<br>
-                {<br>
+                <h3>Syntax of function definition</h3>
+                <h5>returnType functionName(type1 argument1, type2 argument2, ...)<br>
+                    {<br>
                     //body of the function<br>
-                }</h5>
-            <p>When a function is called, the control of the program is transferred to the function definition. And, the compiler starts 
-                executing the codes inside the body of a function.</p>
+                    }</h5>
+                <p>When a function is called, the control of the program is transferred to the function definition. And,
+                    the compiler starts
+                    executing the codes inside the body of a function.</p>
 
-        <h2>Passing arguments to a function</h2>
+                <h2>Passing arguments to a function</h2>
 
-        <p>In programming, argument refers to the variable passed to the function. 
-            In the above example, two variables n1 and n2 are 
-            passed during the function call.<br>The parameters a and b accepts the passed arguments in the function definition. These 
-            arguments are called formal parameters of the function.</p>
+                <p>In programming, argument refers to the variable passed to the function.
+                    In the above example, two variables n1 and n2 are
+                    passed during the function call.<br>The parameters a and b accepts the passed arguments in the
+                    function definition. These
+                    arguments are called formal parameters of the function.</p>
 
-            <img src="https://cdn.programiz.com/sites/tutorial2program/files/pass-arguments-c-programming.jpg">
-            <p>The type of arguments passed to a function and the formal parameters must match, otherwise, the compiler will throw an error.</p>
-            <p>If n1 is of char type, a also should be of char type. If n2 is of float type, variable b also should be of float type.<br>
-                A function can also be called without passing an argument.</p>
+                <img src="https://cdn.programiz.com/sites/tutorial2program/files/pass-arguments-c-programming.jpg">
+                <p>The type of arguments passed to a function and the formal parameters must match, otherwise, the
+                    compiler will throw an error.</p>
+                <p>If n1 is of char type, a also should be of char type. If n2 is of float type, variable b also should
+                    be of float type.<br>
+                    A function can also be called without passing an argument.</p>
 
-        <h2>Return Statement</h2>
+                <h2>Return Statement</h2>
 
-        <p>The return statement terminates the execution of a function and returns a value to the calling function. 
-            The program control is transferred to the calling function after the return statement.<br>
-            In the above example, the value of the result variable is returned to
-            the main function. The sum variable in the main() function is assigned this value.
-        </p>
+                <p>The return statement terminates the execution of a function and returns a value to the calling
+                    function.
+                    The program control is transferred to the calling function after the return statement.<br>
+                    In the above example, the value of the result variable is returned to
+                    the main function. The sum variable in the main() function is assigned this value.
+                </p>
 
-        <img src="https://cdn.programiz.com/sites/tutorial2program/files/c-return-statement.jpg" alt="Return Statement of Function">
+                <img src="https://cdn.programiz.com/sites/tutorial2program/files/c-return-statement.jpg"
+                    alt="Return Statement of Function">
 
-        <h3>Syntax of return statement</h3>
-        <h5><code>return (expression);</code></h5>
+                <h3>Syntax of return statement</h3>
+                <h5><code>return (expression);</code></h5>
 
-        <p>For example,</p>
-        <h5>return a;<br>
-            return (a+b);</h5>
+                <p>For example,</p>
+                <h5>return a;<br>
+                    return (a+b);</h5>
 
-        <p>The type of value returned from the function and the return type specified in the 
-            function prototype and function definition must match.</p>
+                <p>The type of value returned from the function and the return type specified in the
+                    function prototype and function definition must match.</p>
 
-        <p>Visit this page to learn more on<a href="#"> passing arguments and returning value from a function.</a></p>
+                <p>Visit this page to learn more on<a href="#"> passing arguments and returning value from a
+                        function.</a></p>
+            </div>
         </div>
     </div>
-    </div>
 </body>
+
 </html>

@@ -1,174 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../css/style.css" />
     <title>Variables, Constants and Literals</title>
-	<style>
-         
-        h1{
-            font-family: "Major Mono Display"; 
+    <style>
+        h1 {
+            font-family: "Major Mono Display";
             text-align: center;
         }
 
-        h2{
+        h2 {
             font-family: "Source Sans Pro";
-            text-decoration: underline;
-            text-decoration-color: lightgrey;
-            text-decoration-thickness: 3px;
+            /* text-decoration: underline; */
+            /* text-decoration-color: lightgrey; */
+            /* text-decoration-thickness: 3px; */
         }
-        table, td, th {  
-        border: 1px solid #06f;
-        text-align: left;
+
+        table,
+        td,
+        th {
+            border: 1px solid #06f;
+            text-align: left;
         }
 
         table {
-        border-collapse: collapse;
-        width: 60%;
+            border-collapse: collapse;
+            width: 60%;
         }
 
-        th, td {
-        padding: 8px;
-        }  
+        th,
+        td {
+            padding: 8px;
+        }
+
+        code {
+            font-family: Courier, sans-serif;
+            font-size: 1em;
+            line-height: 1.3;
+        }
     </style>
+
+    <script src="../QR_V3/qr.min.js"></script>
 </head>
+
 <body>
-    <div class="page-border">  <!--Use this to add page border around page-->
+    <div class="page-border">
+        <!--Use this to add page border around page-->
         <div>
-            <div class="content-box">  <!--Use this to center content in the page so it won't hit the borders-->	
-    <h1>c variables, constants and literals</h1>
-    <p>
-        This course will teach you about variables and the rules for naming them. You'll also learn how to build constants and different types of literals in C programming.
-    </p>
-    <h2>Video: Variables in C Programming</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/h4VBpylsjJc?autoplay=1&mute=1"></iframe>
-    
-    <h2>Variables</h2>
-    <p>
-        A variable is a container (storage area) for data in programming.
-    </p>
-    <p>
-        Each variable should be given an unique name to denote the storage area (identifier). Variable names are nothing more than a symbol for a memory location. For example:
-        <code>int playerScore = 95;</code>
-        <p>Here, <var>playerScore</var> is a variable of <code>int</code> type. Here, the variable is assigned an integer value <code>95</code>.</p>
-        <p>
-            The term variable comes from the fact that a variable's value can be modified.
-        </p>
-        <code>
+            <div class="mini-nav">
+                <h1>c introduction</h1>
+                <div class="mini-nav-functions">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" width="40"
+                        fill="currentColor" onclick="location.href='#demo-modal'">
+                        <path fill-rule="evenodd"
+                            d="M3 4a1 1 0 011-1h3a1 1 0 011 1v3a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm2 2V5h1v1H5zM3 13a1 1 0 011-1h3a1 1 0 011 1v3a1 1 0 01-1 1H4a1 1 0 01-1-1v-3zm2 2v-1h1v1H5zM13 3a1 1 0 00-1 1v3a1 1 0 001 1h3a1 1 0 001-1V4a1 1 0 00-1-1h-3zm1 2v1h1V5h-1z"
+                            clip-rule="evenodd" />
+                        <path
+                            d="M11 4a1 1 0 10-2 0v1a1 1 0 002 0V4zM10 7a1 1 0 011 1v1h2a1 1 0 110 2h-3a1 1 0 01-1-1V8a1 1 0 011-1zM16 9a1 1 0 100 2 1 1 0 000-2zM9 13a1 1 0 011-1h1a1 1 0 110 2v2a1 1 0 11-2 0v-3zM7 11a1 1 0 100-2H4a1 1 0 100 2h3zM17 13a1 1 0 01-1 1h-2a1 1 0 110-2h2a1 1 0 011 1zM16 17a1 1 0 100-2h-3a1 1 0 100 2h3z" />
+                    </svg>
+                    <svg class="navi-home" xmlns="http://www.w3.org/2000/svg" viewBox="-2 -1.5 24 24" width="40"
+                        fill="currentColor" onclick="location.href='/WebProject/navigation-page.html'">
+                        <path
+                            d="M13 20.565v-5a3 3 0 0 0-6 0v5H2a2 2 0 0 1-2-2V7.697a2 2 0 0 1 .971-1.715l8-4.8a2 2 0 0 1 2.058 0l8 4.8A2 2 0 0 1 20 7.697v10.868a2 2 0 0 1-2 2h-5z">
+                        </path>
+                    </svg>
+                    <svg class="navi-home" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                        width="40" fill="currentColor" onclick="location.href='../forum/index.php'">
+                        <path fill-rule="evenodd"
+                            d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+            </div>
+
+            <!--Dynamic QR Code-->
+            <div id="demo-modal" class="modal">
+                <div class="modal__content">
+                    <h1>share your code</h1>
+
+                    <form>
+                        <input type="url" id="website" name="website" placeholder="copy and paste" required
+                            class="qr-box" />
+                        <button type="button" onclick="generateQRCode()" class="item2">
+                            GENERATE
+                        </button>
+                    </form>
+
+                    <div id="qrcode-container">
+                        <div id="qrcode" class="qrcode"></div>
+                    </div>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="navi-home" viewBox="0 0 20 20" fill="currentColor"
+                        width="50" onclick="location.href='#'">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                            clip-rule="evenodd" />
+                    </svg>
+
+                    <script type="text/javascript">
+                        function generateQRCode() {
+                            let website = document.getElementById("website").value;
+                            if (website) {
+                                let qrcodeContainer = document.getElementById("qrcode");
+                                qrcodeContainer.innerHTML = "";
+                                new QRCode(qrcodeContainer, website);
+                                /*With some styles*/
+                                /**
+                                    
+                                    let qrcodeContainer2 = document.getElementById("qrcode-2");
+                                    qrcodeContainer2.innerHTML = "";
+                                    new QRCode(qrcodeContainer2, {
+                                        text: website,
+                                        width: 128,
+                                        height: 128,
+                                        colorDark: "#5868bf",
+                                        colorLight: "#ffffff",
+                                        correctLevel: QRCode.CorrectLevel.H
+                                    });
+                                */
+                                document.getElementById("qrcode-container").style.display = "block";
+                            } else {
+                                alert("Please enter a valid URL");
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+            <!---------------------------------- Dynamic QR Code - END --------------------------------------------->
+            <div class="content-box">
+                <!--Use this to center content in the page so it won't hit the borders-->
+                <h1>c variables, constants and literals</h1>
+                <p>
+                    This course will teach you about variables and the rules for naming them. You'll also learn how to
+                    build constants and different types of literals in C programming.
+                </p>
+                <h2>Video: Variables in C Programming</h2>
+                <iframe width="560" height="315"
+                    src="https://www.youtube.com/embed/h4VBpylsjJc?autoplay=1&mute=1"></iframe>
+
+                <h2>Variables</h2>
+                <p>
+                    A variable is a container (storage area) for data in programming.
+                </p>
+                <p>
+                    Each variable should be given an unique name to denote the storage area (identifier). Variable names
+                    are nothing more than a symbol for a memory location. For example:
+                    <code>int playerScore = 95;</code>
+                <p>Here, <var>playerScore</var> is a variable of <code>int</code> type. Here, the variable is assigned
+                    an integer value <code>95</code>.</p>
+                <p>
+                    The term variable comes from the fact that a variable's value can be modified.
+                </p>
+                <code>
             char ch = 'a';
             <br>// some code
             <br>ch = '1';
         </code>
-        
-    <h3>Rules for naming a variable</h3>
-    <ol><li>A variable name can only have letters (both uppercase and lowercase letters), digits and underscore.</li>
-        <li>The first letter of a variable should be either a letter or an underscore.</li>
-        <li>There is no rule on how long a variable name (identifier) can be. However, you may run into problems in some compilers if the variable name is longer than 31 characters.</li>
-    </ol><p><strong>Note:</strong> You should always try to give meaningful names to variables. For example: <code>firstName</code> is a better variable name than <code>fn</code>.</p>
 
-    <p>
-        C is a language with a lot of types. Which means that once a variable is declared, it cannot be modified. For example:
+                <h3>Rules for naming a variable</h3>
+                <ol>
+                    <li>A variable name can only have letters (both uppercase and lowercase letters), digits and
+                        underscore.</li>
+                    <li>The first letter of a variable should be either a letter or an underscore.</li>
+                    <li>There is no rule on how long a variable name (identifier) can be. However, you may run into
+                        problems in some compilers if the variable name is longer than 31 characters.</li>
+                </ol>
+                <p><strong>Note:</strong> You should always try to give meaningful names to variables. For example:
+                    <code>firstName</code> is a better variable name than <code>fn</code>.
+                </p>
 
-        <p>
-            <code>
+                <p>
+                    C is a language with a lot of types. Which means that once a variable is declared, it cannot be
+                    modified. For example:
+
+                <p>
+                    <code>
                 int number = 5;      // integer variable
                 <br>number = 5.5;        // error
                 <br>double number;       // error
             </code>
-        </p>
-    </p>
-    <p>
-        Here, the type of <var>number</var> variable is <code>int</code>. You cannot assign a floating-point (decimal) value <samp>5.5</samp> to this variable. Also, you cannot redefine the data type of the variable to <code>double</code>. By the way, to store the decimal values in C, you need to declare its type to either <code>double</code> or <code>float</code>.
-    </p>
+                </p>
+                </p>
+                <p>
+                    Here, the type of <var>number</var> variable is <code>int</code>. You cannot assign a floating-point
+                    (decimal) value <samp>5.5</samp> to this variable. Also, you cannot redefine the data type of the
+                    variable to <code>double</code>. By the way, to store the decimal values in C, you need to declare
+                    its type to either <code>double</code> or <code>float</code>.
+                </p>
 
-    <h2>Literals</h2>
+                <h2>Literals</h2>
 
-    <p>
-        Literals are data used for representing fixed values. They can be used directly in the code. For example: <var>1</var>, <var>2.5</var>, and <var>'c'</var>.
-    </p>
-    <p>
-        Here, <var>1</var>, <code>2.5</code> and <var>'c'</var> are literals. Why? These terms cannot have various values assigned to them.
-    </p>
+                <p>
+                    Literals are data used for representing fixed values. They can be used directly in the code. For
+                    example: <var>1</var>, <var>2.5</var>, and <var>'c'</var>.
+                </p>
+                <p>
+                    Here, <var>1</var>, <code>2.5</code> and <var>'c'</var> are literals. Why? These terms cannot have
+                    various values assigned to them.
+                </p>
 
-    <h3>1. Integers</h3>
-    <p>
-        An integer is a numeric literal (a number) that does not contain any fractional or exponential parts. In C programming, there are three types of integer literals:
-    </p>
-    <ul>
-        <li>decimal (base 10)</li>
-	    <li>octal (base 8)</li>
-	    <li>hexadecimal (base 16)</li>
-    </ul>
-    <p>For example:</p>
-    <pre>
+                <h3>1. Integers</h3>
+                <p>
+                    An integer is a numeric literal (a number) that does not contain any fractional or exponential
+                    parts. In C programming, there are three types of integer literals:
+                </p>
+                <ul>
+                    <li>decimal (base 10)</li>
+                    <li>octal (base 8)</li>
+                    <li>hexadecimal (base 16)</li>
+                </ul>
+                <p>For example:</p>
+                <pre>
         Decimal: 0, -9, 22 etc
         Octal: 021, 077, 033 etc
         Hexadecimal: 0x7f, 0x2a, 0x521
     </pre>
-    <p>
-        In C programming, octal starts with a <var>0</var>, and hexadecimal starts with a <var>0x</var>. 
-    </p>
+                <p>
+                    In C programming, octal starts with a <var>0</var>, and hexadecimal starts with a <var>0x</var>.
+                </p>
 
-    <h3>2. Floating-point Literals</h3>
-    <p>
-        A numeric literal with a fractional or exponent form is known as a floating-point literal. For example:
-    </p>
-    <pre>
+                <h3>2. Floating-point Literals</h3>
+                <p>
+                    A numeric literal with a fractional or exponent form is known as a floating-point literal. For
+                    example:
+                </p>
+                <pre>
         -2.0
         0.0000234
         -0.22E-5
     </pre>
-    <p>
-        <strong>Note:</strong> <code>E-5 = 10</code><code><sup>-5</sup></code>
-    </p>
+                <p>
+                    <strong>Note:</strong> <code>E-5 = 10</code><code><sup>-5</sup></code>
+                </p>
 
-    <h3>3. Characters</h3>
-    <p>
-        A character literal is created by enclosing a single character inside single quotation marks. For example: <var>'a'</var>, <var>'m'</var>, <var>'F'</var>, <var>'2'</var> and <var>'}'</var>.
-    </p>
+                <h3>3. Characters</h3>
+                <p>
+                    A character literal is created by enclosing a single character inside single quotation marks. For
+                    example: <var>'a'</var>, <var>'m'</var>, <var>'F'</var>, <var>'2'</var> and <var>'}'</var>.
+                </p>
 
-    <h3>4. Escape Sequences</h3>
-    <p>
-        In C programming, it is sometimes important to include characters that cannot be typed or have specific meaning. For instance, newline (enter), tab, and question mark (?).
-    </p>
-    <p>
-        Escape sequences are used to get these characters.
-    </p>
-    <table border="1" cellpadding="1" cellspacing="1"><caption>Escape Sequences</caption>
-        <thead><tr><th scope="col">Escape Sequences</th>
-			<th scope="col">Character</th>
-		</tr></thead><tbody><tr><td><code>\b</code></td>
-			<td>Backspace</td>
-		</tr><tr><td><code>\f</code></td>
-			<td>Form feed</td>
-		</tr><tr><td><code>\n</code></td>
-			<td>Newline</td>
-		</tr><tr><td><code>\r</code></td>
-			<td>Return</td>
-		</tr><tr><td><code>\t</code></td>
-			<td>Horizontal tab</td>
-		</tr><tr><td><code>\v</code></td>
-			<td>Vertical tab</td>
-		</tr><tr><td><code>\\</code></td>
-			<td>Backslash</td>
-		</tr><tr><td><code>\'</code></td>
-			<td>Single quotation mark</td>
-		</tr><tr><td><code>\"</code></td>
-			<td>Double quotation mark</td>
-		</tr><tr><td><code>\?</code></td>
-			<td>Question mark</td>
-		</tr><tr><td><code>\0</code></td>
-			<td>Null character</td>
-		</tr></tbody>
-    </table>
+                <h3>4. Escape Sequences</h3>
+                <p>
+                    In C programming, it is sometimes important to include characters that cannot be typed or have
+                    specific meaning. For instance, newline (enter), tab, and question mark (?).
+                </p>
+                <p>
+                    Escape sequences are used to get these characters.
+                </p>
+                <table border="1" cellpadding="1" cellspacing="1">
+                    <caption>Escape Sequences</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Escape Sequences</th>
+                            <th scope="col">Character</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>\b</code></td>
+                            <td>Backspace</td>
+                        </tr>
+                        <tr>
+                            <td><code>\f</code></td>
+                            <td>Form feed</td>
+                        </tr>
+                        <tr>
+                            <td><code>\n</code></td>
+                            <td>Newline</td>
+                        </tr>
+                        <tr>
+                            <td><code>\r</code></td>
+                            <td>Return</td>
+                        </tr>
+                        <tr>
+                            <td><code>\t</code></td>
+                            <td>Horizontal tab</td>
+                        </tr>
+                        <tr>
+                            <td><code>\v</code></td>
+                            <td>Vertical tab</td>
+                        </tr>
+                        <tr>
+                            <td><code>\\</code></td>
+                            <td>Backslash</td>
+                        </tr>
+                        <tr>
+                            <td><code>\'</code></td>
+                            <td>Single quotation mark</td>
+                        </tr>
+                        <tr>
+                            <td><code>\"</code></td>
+                            <td>Double quotation mark</td>
+                        </tr>
+                        <tr>
+                            <td><code>\?</code></td>
+                            <td>Question mark</td>
+                        </tr>
+                        <tr>
+                            <td><code>\0</code></td>
+                            <td>Null character</td>
+                        </tr>
+                    </tbody>
+                </table>
 
-    <h3>5. String Literals</h3>
-    <p>
-        A string literal is a collection of characters enclosed by double-quote marks. For example: 
-    </p>
-    <pre>
+                <h3>5. String Literals</h3>
+                <p>
+                    A string literal is a collection of characters enclosed by double-quote marks. For example:
+                </p>
+                <pre>
 "good"                    //string constant
 ""                       //null string constant
 "      "                //string constant of six white space
@@ -176,28 +319,30 @@
 "Earth is round\n"    //prints string with a newline
     </pre>
 
-    <h2>Constants</h2>
-    <p>
-        The <code>const</code> keyword can be used to define a variable whose value cannot be modified. As a result, a constant will be created. For example: 
-    </p>
-    <pre><code>
+                <h2>Constants</h2>
+                <p>
+                    The <code>const</code> keyword can be used to define a variable whose value cannot be modified. As a
+                    result, a constant will be created. For example:
+                </p>
+                <pre><code>
         const double PI = 3.14;
     </code></pre>
-    <p>
-        You'll notice that we've introduced the keyword <code>const</code>. 
-    </p>
-    <p>
-        <var>PI</var> is a symbolic constant in this case, and its value cannot be modified. 
-    </p>
-    <pre>
+                <p>
+                    You'll notice that we've introduced the keyword <code>const</code>.
+                </p>
+                <p>
+                    <var>PI</var> is a symbolic constant in this case, and its value cannot be modified.
+                </p>
+                <pre>
         <code>const double PI = 3.14;
         PI = 2.9; //Error </code>
     </pre>
-    <p>
-        Constant can also be defined using <code>#define</code> preprocessor directive. 
-    </p>
- </div>
+                <p>
+                    Constant can also be defined using <code>#define</code> preprocessor directive.
+                </p>
+            </div>
         </div>
-    </div>		
+    </div>
 </body>
+
 </html>

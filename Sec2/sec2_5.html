@@ -1,4 +1,4 @@
-DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,61 +7,177 @@ DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style.css" />
     <title>C Language</title>
+
+    <style>
+        h1 {
+            font-family: "Major Mono Display";
+            text-align: center;
+        }
+
+        h2 {
+            font-family: "Source Sans Pro";
+            text-decoration: underline;
+            text-decoration-color: lightgrey;
+            text-decoration-thickness: 3px;
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid #06f;
+            text-align: left;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 60%;
+        }
+
+        th,
+        td {
+            padding: 8px;
+        }
+    </style>
+
+    <script src="../QR_V3/qr.min.js"></script>
 </head>
+
 <body>
-    <div class="page-border">  <!--Use this to add page border around page-->
+    <div class="page-border">
+        <!--Use this to add page border around page-->
         <div>
-            <div class="content-box">  <!--Use this to center content in the page so it won't hit the borders-->
-    <h1>C switch Statement</h1>
-    <p><b>In this tutorial, you will learn to create the switch 
-        statement in C programming with the help of an example.</b>
-    </p>
-    <p>
-        The switch statement allows us 
-        to execute one code block among many alternatives.<br>
-        <br>You can do the same thing with the if...else..if ladder. However, the syntax
-        of the switch statement is much easier to read and write.
-    </p>
+            <div class="mini-nav">
+                <h1>c introduction</h1>
+                <div class="mini-nav-functions">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" width="40"
+                        fill="currentColor" onclick="location.href='#demo-modal'">
+                        <path fill-rule="evenodd"
+                            d="M3 4a1 1 0 011-1h3a1 1 0 011 1v3a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm2 2V5h1v1H5zM3 13a1 1 0 011-1h3a1 1 0 011 1v3a1 1 0 01-1 1H4a1 1 0 01-1-1v-3zm2 2v-1h1v1H5zM13 3a1 1 0 00-1 1v3a1 1 0 001 1h3a1 1 0 001-1V4a1 1 0 00-1-1h-3zm1 2v1h1V5h-1z"
+                            clip-rule="evenodd" />
+                        <path
+                            d="M11 4a1 1 0 10-2 0v1a1 1 0 002 0V4zM10 7a1 1 0 011 1v1h2a1 1 0 110 2h-3a1 1 0 01-1-1V8a1 1 0 011-1zM16 9a1 1 0 100 2 1 1 0 000-2zM9 13a1 1 0 011-1h1a1 1 0 110 2v2a1 1 0 11-2 0v-3zM7 11a1 1 0 100-2H4a1 1 0 100 2h3zM17 13a1 1 0 01-1 1h-2a1 1 0 110-2h2a1 1 0 011 1zM16 17a1 1 0 100-2h-3a1 1 0 100 2h3z" />
+                    </svg>
+                    <svg class="navi-home" xmlns="http://www.w3.org/2000/svg" viewBox="-2 -1.5 24 24" width="40"
+                        fill="currentColor" onclick="location.href='/WebProject/navigation-page.html'">
+                        <path
+                            d="M13 20.565v-5a3 3 0 0 0-6 0v5H2a2 2 0 0 1-2-2V7.697a2 2 0 0 1 .971-1.715l8-4.8a2 2 0 0 1 2.058 0l8 4.8A2 2 0 0 1 20 7.697v10.868a2 2 0 0 1-2 2h-5z">
+                        </path>
+                    </svg>
+                    <svg class="navi-home" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                        width="40" fill="currentColor" onclick="location.href='../forum/index.php'">
+                        <path fill-rule="evenodd"
+                            d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+            </div>
 
-    <h2>Syntax of switch...case</h2>
-    <h5>
-        switch (expression)<br>
-    {<br>
-    case constant1:<br>
-      // statements<br>
-      break;<br>
-      <br>
-    case constant2:<br>
-      // statements<br>
-      break;<br>
-    .<br>
-    .<br>
-    .<br>
-    default:<br>
-      // default statements<br>
-        }<br>
-    </h5>
+            <!--Dynamic QR Code-->
+            <div id="demo-modal" class="modal">
+                <div class="modal__content">
+                    <h1>share your code</h1>
 
-    <h3>How does the switch statement work?</h3>
-    <p>The expression is evaluated once and
-        compared with the values of each case label.
-    <li>If there is a match, the corresponding statements 
-        after the matching label are executed. For example, 
-        if the value of the expression is equal to constant2, statements after 
-        case constant2: are executed until break is encountered.</li>
-    <li>If there is no match, the default statements are executed.</li>
-    </p>
+                    <form>
+                        <input type="url" id="website" name="website" placeholder="copy and paste" required
+                            class="qr-box" />
+                        <button type="button" onclick="generateQRCode()" class="item2">
+                            GENERATE
+                        </button>
+                    </form>
 
-    <h4>Notes:</h4>
-    <li>If we do not use the break statement, all statements after 
-        the matching label are also executed.</li>
-        <li>The default clause inside the switch statement is optional.</li>
+                    <div id="qrcode-container">
+                        <div id="qrcode" class="qrcode"></div>
+                    </div>
 
-        <h3>switch Statement Flowchart</h3>
-        <img src="img/sec2_5.png">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="navi-home" viewBox="0 0 20 20" fill="currentColor"
+                        width="50" onclick="location.href='#'">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                            clip-rule="evenodd" />
+                    </svg>
 
-        <h3>Example: Simple Calculator</h3>
-        <pre>
+                    <script type="text/javascript">
+                        function generateQRCode() {
+                            let website = document.getElementById("website").value;
+                            if (website) {
+                                let qrcodeContainer = document.getElementById("qrcode");
+                                qrcodeContainer.innerHTML = "";
+                                new QRCode(qrcodeContainer, website);
+                                /*With some styles*/
+                                /**
+                                    
+                                    let qrcodeContainer2 = document.getElementById("qrcode-2");
+                                    qrcodeContainer2.innerHTML = "";
+                                    new QRCode(qrcodeContainer2, {
+                                        text: website,
+                                        width: 128,
+                                        height: 128,
+                                        colorDark: "#5868bf",
+                                        colorLight: "#ffffff",
+                                        correctLevel: QRCode.CorrectLevel.H
+                                    });
+                                */
+                                document.getElementById("qrcode-container").style.display = "block";
+                            } else {
+                                alert("Please enter a valid URL");
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+            <!---------------------------------- Dynamic QR Code - END --------------------------------------------->
+            <div class="content-box">
+                <!--Use this to center content in the page so it won't hit the borders-->
+                <h1>c switch statement</h1>
+                <p><b>In this tutorial, you will learn to create the switch
+                        statement in C programming with the help of an example.</b>
+                </p>
+                <p>
+                    The switch statement allows us
+                    to execute one code block among many alternatives.<br>
+                    <br>You can do the same thing with the if...else..if ladder. However, the syntax
+                    of the switch statement is much easier to read and write.
+                </p>
+
+                <h2>Syntax of switch...case</h2>
+                <h5>
+                    switch (expression)<br>
+                    {<br>
+                    case constant1:<br>
+                    // statements<br>
+                    break;<br>
+                    <br>
+                    case constant2:<br>
+                    // statements<br>
+                    break;<br>
+                    .<br>
+                    .<br>
+                    .<br>
+                    default:<br>
+                    // default statements<br>
+                    }<br>
+                </h5>
+
+                <h3>How does the switch statement work?</h3>
+                <p>The expression is evaluated once and
+                    compared with the values of each case label.
+                    <li>If there is a match, the corresponding statements
+                        after the matching label are executed. For example,
+                        if the value of the expression is equal to constant2, statements after
+                        case constant2: are executed until break is encountered.</li>
+                    <li>If there is no match, the default statements are executed.</li>
+                </p>
+
+                <h4>Notes:</h4>
+                <li>If we do not use the break statement, all statements after
+                    the matching label are also executed.</li>
+                <li>The default clause inside the switch statement is optional.</li>
+
+                <h3>switch Statement Flowchart</h3>
+                <img src="img/sec2_5.png">
+
+                <h3>Example: Simple Calculator</h3>
+                <pre>
             <p>// Program to create a simple calculator</p>
             <code>#include &lt;stdio.h&gt;
 
@@ -101,24 +217,25 @@ DOCTYPE html>
             }</code>
         </pre>
 
-        <h4>Output</h4>
-        <h5>
-            Enter an operator (+, -, *,): - <br>
-            Enter two operands: 32.5<br>
-            12.4<br>
-            32.5 - 12.4 = 20.1  <br>
-        </h5>
+                <h4>Output</h4>
+                <h5>
+                    Enter an operator (+, -, *,): - <br>
+                    Enter two operands: 32.5<br>
+                    12.4<br>
+                    32.5 - 12.4 = 20.1 <br>
+                </h5>
 
-        <p>The - operator entered by the user is stored in 
-            the operator variable. And, two operands 32.5 and 
-            12.4 are stored in variables n1 and n2 respectively.
-            <br>
-            <br>Since the operator is -, the control of the program jumps to
-        </p>
-        <h5><code>printf("%.1lf - %.1lf = %.1lf", n1, n2, n1-n2);</code></h5>
-        <p>Finally, the <a href="#">break statement</a>terminates the switch statement.</p>
+                <p>The - operator entered by the user is stored in
+                    the operator variable. And, two operands 32.5 and
+                    12.4 are stored in variables n1 and n2 respectively.
+                    <br>
+                    <br>Since the operator is -, the control of the program jumps to
+                </p>
+                <h5><code>printf("%.1lf - %.1lf = %.1lf", n1, n2, n1-n2);</code></h5>
+                <p>Finally, the <a href="#">break statement</a>terminates the switch statement.</p>
+            </div>
         </div>
     </div>
-    </div>
 </body>
+
 </html>

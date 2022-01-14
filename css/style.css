@@ -5,7 +5,9 @@
 
 * {
   box-sizing: border-box;
-  font-family: "Source Code Pro", monospace;
+  /**
+    font-family: "Source Code Pro", monospace;
+  */
 }
 
 html {
@@ -13,6 +15,12 @@ html {
   background-color: white;
 }
 
+h2 {
+  font-family: "Major Mono Display", monospace;
+  text-decoration: underline;
+  text-decoration-color: lightgrey;
+  text-decoration-thickness: 6px;
+}
 /**
   Navbar
 */
@@ -30,7 +38,7 @@ html {
 .navi-home:hover {
   fill: #2afadf;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-                rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 .navi-home {
@@ -84,7 +92,7 @@ ol a:hover {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  gap: 75%;
+  gap: 61%;
   padding-top: 5px;
   padding-left: 12px;
   padding-right: 12px;
@@ -287,4 +295,203 @@ ol a:hover {
   padding-left: 5%;
   padding-right: 5%;
   padding-bottom: 3%;
+}
+
+/**
+  =================================================================================================================================================
+  code box
+  =================================================================================================================================================
+*/
+
+.basic-code{
+  border:1px solid blueviolet;
+  padding-left: 12px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#codebox {
+  padding: 15px;
+  font-family: Courier, sans-serif;
+  font-size: 1em;
+  line-height: 1.3;
+  color: #fff;
+  background-color: #2c3e50;
+  -webkit-border-radius: 0px 0px 6px 6px;
+  -moz-border-radius: 0px 0px 6px 6px;
+  border-radius: 0px 0px 6px 6px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+code {
+	font-family: Courier, sans-serif;
+  font-size: 1em;
+	line-height: 1.3;
+}
+
+.codeheader {
+  padding: 5px 5px 5px 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1em;
+  color: #fff;
+  -webkit-border-radius: 6px 6px 0px 0px;
+  -moz-border-radius: 6px 6px 0px 0px;
+  border-radius: 6px 6px 0px 0px;
+	user-select: none;
+	-ms-user-select: none; /* IE10+, Edge */
+	-moz-user-select: none; /* Mozilla */
+	-webkit-user-select: none; /* Safari */
+}
+
+#codeheader_html {
+  background-color: #3D9970;
+}
+#codeheader_css {
+  background-color: #e67e22;
+}
+#codeheader_php {
+  background-color: #85144b;
+}
+#codeheader_js {
+  background-color: #0074D9;
+}
+
+/**
+  =================================================================================================================================================
+  modal box
+  =================================================================================================================================================
+*/
+
+.wrapper {
+  height: 100vh;
+  /* This part is important for centering the content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* End center */
+  background: -webkit-linear-gradient(to right, #834d9b, #d04ed6);
+  background: linear-gradient(to right, #834d9b, #d04ed6);
+}
+
+.wrapper a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 3px;
+  text-transform: uppercase;
+  color: #585858;
+  font-family: 'Roboto', sans-serif;
+}
+
+.modal {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(77 77 77 / 25%);
+  transition: all .4s;
+  height: 100vh;
+  flex-wrap: nowrap;
+}
+
+.modal:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal__content {
+  border-radius: 4px;
+  position: relative;
+  width: 500px;
+  max-width: 90%;
+  background: #fff;
+  padding: 2em 1em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 26px;
+  align-items: center;
+}
+
+.modal__footer {
+  text-align: right;
+  a {
+    color: #585858;
+  }
+  i {
+    color: #d02d2c;
+  }
+}
+.modal__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #585858;
+  text-decoration: none;
+}
+
+.item2 {
+  font-family: "Source Code Pro", monospace;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  color: #000;
+  cursor: pointer;
+  display: inline-flex;
+  fill: #000;
+  font-size: 12px;
+  font-weight: 400;
+  height: 23px;
+  /* width: 4px; */
+  justify-content: center;
+  letter-spacing: -0.8px;
+  line-height: 24px;
+  min-width: 140px;
+  outline: 0;
+  padding: 0 17px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.item2:focus {
+  color: #171e29;
+}
+
+.item2:hover {
+  border-color: #06f;
+  color: #06f;
+  fill: #06f;
+}
+
+@media (min-width: 768px) {
+  .button-59 {
+    min-width: 170px;
+  }
+}
+
+
+.qr-box{
+  border: 2px solid black;
+  width: 257px;
+}
+
+.qr-box:focus{
+  border-color: aquamarine;
+}
+
+.qr-box:hover {
+  border-color: aquamarine;
 }

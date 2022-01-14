@@ -1,72 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../css/style.css" />
     <title>C Programming Operators</title>
     <style>
-         
-        h1{
-            font-family: "Major Mono Display"; 
+        h1 {
+            font-family: "Major Mono Display";
             text-align: center;
         }
 
-        h2{
+        h2 {
             font-family: "Source Sans Pro";
             text-decoration: underline;
             text-decoration-color: lightgrey;
             text-decoration-thickness: 3px;
         }
-        table, td, th {  
-        border: 1px solid #06f;
-        text-align: left;
+
+        table,
+        td,
+        th {
+            border: 1px solid #06f;
+            text-align: left;
         }
 
         table {
-        border-collapse: collapse;
-        width: 60%;
+            border-collapse: collapse;
+            width: 60%;
         }
 
-        th, td {
-        padding: 8px;
-        }  
+        th,
+        td {
+            padding: 8px;
+        }
+
+        code {
+            font-family: Courier, sans-serif;
+            font-size: 1em;
+            line-height: 1.3;
+        }
     </style>
+
+    <script src="../QR_V3/qr.min.js"></script>
 </head>
+
 <body>
-    <div class="page-border">  <!--Use this to add page border around page-->
+    <div class="page-border">
+        <!--Use this to add page border around page-->
         <div>
-            <div class="content-box">  <!--Use this to center content in the page so it won't hit the borders-->
-    <h1>c programming operators</h1>
-    <p>You will learn about several operators in C programming.</p>
-<!----------------------------------->    
-    <h2>Video: Arithmetic Operators in C</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/_57FcSBtJNU?autoplay=1&mute=1">
-</iframe>
-<p>A symbol that operates on a value or variable is known as an operator. For example, the operator <var>+</var> is used to execute addition.</p>
-<p>C contains a large number of operators that can be used to do a variety of tasks.</p>
-<!----------------------------------->    
-    <h2>C Arithmetic Operators</h2>
-    <p>Addition, subtraction, multiplication, division etc are performed on numerical values (constants and variables)</p>
-    <table border="1" cellpadding="1" cellspacing="1">
-        <thead><tr><th scope="col">Operator</th>
-        <th scope="col">Meaning of Operator</th>
-        </tr></thead><tbody><tr><td>+</td>
-        <td>addition or unary plus</td>
-        </tr><tr><td>-</td>
-        <td>subtraction or unary minus</td>
-        </tr><tr><td>*</td>
-        <td>multiplication</td>
-        </tr><tr><td>/</td>
-        <td>division</td>
-        </tr><tr><td>%</td>
-        <td>remainder after division (modulo division)</td>
-    </tr></tbody>
-    </table>
-<!----------------------------------->    
-    <h3>Example 1: Arithmetic Operators</h3>
-    <pre>
+            <div class="mini-nav">
+                <h1>c introduction</h1>
+                <div class="mini-nav-functions">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" width="40"
+                        fill="currentColor" onclick="location.href='#demo-modal'">
+                        <path fill-rule="evenodd"
+                            d="M3 4a1 1 0 011-1h3a1 1 0 011 1v3a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm2 2V5h1v1H5zM3 13a1 1 0 011-1h3a1 1 0 011 1v3a1 1 0 01-1 1H4a1 1 0 01-1-1v-3zm2 2v-1h1v1H5zM13 3a1 1 0 00-1 1v3a1 1 0 001 1h3a1 1 0 001-1V4a1 1 0 00-1-1h-3zm1 2v1h1V5h-1z"
+                            clip-rule="evenodd" />
+                        <path
+                            d="M11 4a1 1 0 10-2 0v1a1 1 0 002 0V4zM10 7a1 1 0 011 1v1h2a1 1 0 110 2h-3a1 1 0 01-1-1V8a1 1 0 011-1zM16 9a1 1 0 100 2 1 1 0 000-2zM9 13a1 1 0 011-1h1a1 1 0 110 2v2a1 1 0 11-2 0v-3zM7 11a1 1 0 100-2H4a1 1 0 100 2h3zM17 13a1 1 0 01-1 1h-2a1 1 0 110-2h2a1 1 0 011 1zM16 17a1 1 0 100-2h-3a1 1 0 100 2h3z" />
+                    </svg>
+                    <svg class="navi-home" xmlns="http://www.w3.org/2000/svg" viewBox="-2 -1.5 24 24" width="40"
+                        fill="currentColor" onclick="location.href='/WebProject/navigation-page.html'">
+                        <path
+                            d="M13 20.565v-5a3 3 0 0 0-6 0v5H2a2 2 0 0 1-2-2V7.697a2 2 0 0 1 .971-1.715l8-4.8a2 2 0 0 1 2.058 0l8 4.8A2 2 0 0 1 20 7.697v10.868a2 2 0 0 1-2 2h-5z">
+                        </path>
+                    </svg>
+                    <svg class="navi-home" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                        width="40" fill="currentColor" onclick="location.href='../forum/index.php'">
+                        <path fill-rule="evenodd"
+                            d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+            </div>
+
+            <!--Dynamic QR Code-->
+            <div id="demo-modal" class="modal">
+                <div class="modal__content">
+                    <h1>share your code</h1>
+
+                    <form>
+                        <input type="url" id="website" name="website" placeholder="copy and paste" required
+                            class="qr-box" />
+                        <button type="button" onclick="generateQRCode()" class="item2">
+                            GENERATE
+                        </button>
+                    </form>
+
+                    <div id="qrcode-container">
+                        <div id="qrcode" class="qrcode"></div>
+                    </div>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="navi-home" viewBox="0 0 20 20" fill="currentColor"
+                        width="50" onclick="location.href='#'">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                            clip-rule="evenodd" />
+                    </svg>
+
+                    <script type="text/javascript">
+                        function generateQRCode() {
+                            let website = document.getElementById("website").value;
+                            if (website) {
+                                let qrcodeContainer = document.getElementById("qrcode");
+                                qrcodeContainer.innerHTML = "";
+                                new QRCode(qrcodeContainer, website);
+                                /*With some styles*/
+                                /**
+                                    
+                                    let qrcodeContainer2 = document.getElementById("qrcode-2");
+                                    qrcodeContainer2.innerHTML = "";
+                                    new QRCode(qrcodeContainer2, {
+                                        text: website,
+                                        width: 128,
+                                        height: 128,
+                                        colorDark: "#5868bf",
+                                        colorLight: "#ffffff",
+                                        correctLevel: QRCode.CorrectLevel.H
+                                    });
+                                */
+                                document.getElementById("qrcode-container").style.display = "block";
+                            } else {
+                                alert("Please enter a valid URL");
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+            <!---------------------------------- Dynamic QR Code - END --------------------------------------------->
+            <div class="content-box">
+                <!--Use this to center content in the page so it won't hit the borders-->
+                <h1>c programming operators</h1>
+                <p>You will learn about several operators in C programming.</p>
+                <!----------------------------------->
+                <h2>Video: Arithmetic Operators in C</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/_57FcSBtJNU?autoplay=1&mute=1">
+                </iframe>
+                <p>A symbol that operates on a value or variable is known as an operator. For example, the operator
+                    <var>+</var> is used to execute addition.
+                </p>
+                <p>C contains a large number of operators that can be used to do a variety of tasks.</p>
+                <!----------------------------------->
+                <h2>C Arithmetic Operators</h2>
+                <p>Addition, subtraction, multiplication, division etc are performed on numerical values (constants and
+                    variables)</p>
+                <table border="1" cellpadding="1" cellspacing="1">
+                    <thead>
+                        <tr>
+                            <th scope="col">Operator</th>
+                            <th scope="col">Meaning of Operator</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>+</td>
+                            <td>addition or unary plus</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>subtraction or unary minus</td>
+                        </tr>
+                        <tr>
+                            <td>*</td>
+                            <td>multiplication</td>
+                        </tr>
+                        <tr>
+                            <td>/</td>
+                            <td>division</td>
+                        </tr>
+                        <tr>
+                            <td>%</td>
+                            <td>remainder after division (modulo division)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!----------------------------------->
+                <h3>Example 1: Arithmetic Operators</h3>
+                <pre>
         <code>// Working of arithmetic operators
         #include &lt;stdio.h&gt;
         int main()
@@ -86,27 +199,35 @@
             
             return 0;
         }</code></pre>
-        
-        <p><strong>Output</strong></p>
-        
-        <pre>
+
+                <p><strong>Output</strong></p>
+
+                <pre>
         <samp>a+b = 13
         a-b = 5
         a*b = 36
         a/b = 2
         Remainder when a divided by b=1</samp></pre>
-        
-        <p>The operators <code>+</code>, <code>-</code> and <code>*</code> computes addition, subtraction, and multiplication respectively as you might have expected.</p>
-        
-        <p>In normal calculation, <code>9/4 = 2.25</code>. However, the output is <code>2</code> in the program.</p>
-        
-        <p>It is because both the variables <var>a</var> and b are integers. Hence, the output is also an integer. The compiler neglects the term after the decimal point and shows answer <code>2</code> instead of <code>2.25</code>.</p>
-        
-        <p>The modulo operator <code>%</code> computes the remainder. When <code>a=9</code> is divided by <code>b=4</code>, the remainder is <code>1</code>. The <code>%</code> operator can only be used with integers.</p>
-        
-        <p>Suppose <code>a = 5.0</code>, <code>b = 2.0</code>, <code>c = 5</code> and <code>d = 2</code>. Then in C programming,</p>
-        
-        <pre>
+
+                <p>The operators <code>+</code>, <code>-</code> and <code>*</code> computes addition, subtraction, and
+                    multiplication respectively as you might have expected.</p>
+
+                <p>In normal calculation, <code>9/4 = 2.25</code>. However, the output is <code>2</code> in the program.
+                </p>
+
+                <p>It is because both the variables <var>a</var> and b are integers. Hence, the output is also an
+                    integer. The compiler neglects the term after the decimal point and shows answer <code>2</code>
+                    instead of <code>2.25</code>.</p>
+
+                <p>The modulo operator <code>%</code> computes the remainder. When <code>a=9</code> is divided by
+                    <code>b=4</code>, the remainder is <code>1</code>. The <code>%</code> operator can only be used with
+                    integers.
+                </p>
+
+                <p>Suppose <code>a = 5.0</code>, <code>b = 2.0</code>, <code>c = 5</code> and <code>d = 2</code>. Then
+                    in C programming,</p>
+
+                <pre>
         // Either one of the operands is a floating-point number
         a/b = 2.5  
         a/d = 2.5  
@@ -114,14 +235,16 @@
         
         // Both operands are integers
         c/d = 2</pre>
-<!----------------------------------->    
-    <h2>C Increment and Decrement Operators</h2>
-    <p>C programming has two operators increment <code>++</code> and decrement <code>--</code> to change the value of an operand (constant or variable) by 1.</p>
+                <!----------------------------------->
+                <h2>C Increment and Decrement Operators</h2>
+                <p>C programming has two operators increment <code>++</code> and decrement <code>--</code> to change the
+                    value of an operand (constant or variable) by 1.</p>
 
-<p>Increment <code>++</code> increases the value by 1 <br>Decrement <code>--</code> decreases the value by 1.<br>They only operate on a single operand (unary operators).</p>
-<!----------------------------------->    
-    <h3>Example 2: Increment and Decrement Operators</h3>
-    <pre>
+                <p>Increment <code>++</code> increases the value by 1 <br>Decrement <code>--</code> decreases the value
+                    by 1.<br>They only operate on a single operand (unary operators).</p>
+                <!----------------------------------->
+                <h3>Example 2: Increment and Decrement Operators</h3>
+                <pre>
         <code>// Working of increment and decrement operators
         #include &lt;stdio.h&gt;
         int main()
@@ -136,46 +259,69 @@
         
             return 0;
         }</code></pre>
-        
-        <p><strong>Output</strong></p>
-        
-        <pre>
+
+                <p><strong>Output</strong></p>
+
+                <pre>
         <samp>++a = 11
         --b = 99
         ++c = 11.500000
         --d = 99.500000</samp></pre>
-        <p><code>++</code> and <code>--</code> are used as prefixes.<br>These two operators can also be used as postfixes like <code>a++</code> and <code>a--</code>.
-<!----------------------------------->    
-    <h2>C Assignment Operators</h2>
-    <p>The most common assignment operator is <code>=</code>.</p>
+                <p><code>++</code> and <code>--</code> are used as prefixes.<br>These two operators can also be used as
+                    postfixes like <code>a++</code> and <code>a--</code>.
+                    <!----------------------------------->
+                <h2>C Assignment Operators</h2>
+                <p>The most common assignment operator is <code>=</code>.</p>
 
-    <table><thead><tr><th>Operator</th>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Operator</th>
 
-    <table border="1" cellpadding="1" cellspacing="1"><thead><tr><th scope="col">Operator</th>
-        <th scope="col">Example</th>
-        <th scope="col">Same as</th>
-    </tr></thead><tbody><tr><td>=</td>
-        <td>a = b</td>
-        <td>a = b</td>
-    </tr><tr><td>+=</td>
-        <td>a += b</td>
-        <td>a = a+b</td>
-    </tr><tr><td>-=</td>
-        <td>a -= b</td>
-        <td>a = a-b</td>
-    </tr><tr><td>*=</td>
-        <td>a *= b</td>
-        <td>a = a*b</td>
-    </tr><tr><td>/=</td>
-        <td>a /= b</td>
-        <td>a = a/b</td>
-    </tr><tr><td>%=</td>
-        <td>a %= b</td>
-        <td>a = a%b</td>
-    </tr></tbody></table>
-<!----------------------------------->    
-    <h3>Example 3: Assignment Operators</h3>
-    <pre>
+                            <table border="1" cellpadding="1" cellspacing="1">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Operator</th>
+                                        <th scope="col">Example</th>
+                                        <th scope="col">Same as</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>=</td>
+                                        <td>a = b</td>
+                                        <td>a = b</td>
+                                    </tr>
+                                    <tr>
+                                        <td>+=</td>
+                                        <td>a += b</td>
+                                        <td>a = a+b</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-=</td>
+                                        <td>a -= b</td>
+                                        <td>a = a-b</td>
+                                    </tr>
+                                    <tr>
+                                        <td>*=</td>
+                                        <td>a *= b</td>
+                                        <td>a = a*b</td>
+                                    </tr>
+                                    <tr>
+                                        <td>/=</td>
+                                        <td>a /= b</td>
+                                        <td>a = a/b</td>
+                                    </tr>
+                                    <tr>
+                                        <td>%=</td>
+                                        <td>a %= b</td>
+                                        <td>a = a%b</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!----------------------------------->
+                            <h3>Example 3: Assignment Operators</h3>
+                            <pre>
         <code>// Working of assignment operators
         #include &lt;stdio.h&gt;
         int main()
@@ -202,44 +348,64 @@
         
             return 0;
         }</code></pre>
-        
-        <p><strong>Output</strong></p>
-        
-        <pre>
+
+                            <p><strong>Output</strong></p>
+
+                            <pre>
         <samp>c = 5 
         c = 10 
         c = 5 
         c = 25 
         c = 5 
         c = 0</samp></pre>
-<!----------------------------------->    
-    <h3>C Relational Operators</h3>
-    <p>The relationship between two operands is checked by a relational operator. It returns 1 if the relationship is true, and 0 if the relationship is false.</p>
-    <table border="1" cellpadding="1" cellspacing="1"><thead><tr><th scope="col">Operator</th>
-        <th scope="col">Meaning of Operator</th>
-        <th scope="col">Example</th>
-    </tr></thead><tbody><tr><td>==</td>
-        <td>Equal to</td>
-        <td><code>5 == 3</code> is evaluated to 0</td>
-    </tr><tr><td>&gt;</td>
-        <td>Greater than</td>
-        <td><code>5 &gt; 3</code> is evaluated to 1</td>
-    </tr><tr><td>&lt;</td>
-        <td>Less than</td>
-        <td><code>5 &lt; 3</code> is evaluated to 0</td>
-    </tr><tr><td>!=</td>
-        <td>Not equal to</td>
-        <td><code>5 != 3</code> is evaluated to 1</td>
-    </tr><tr><td>&gt;=</td>
-        <td>Greater than or equal to</td>
-        <td><code>5 &gt;= 3</code> is evaluated to 1</td>
-    </tr><tr><td>&lt;=</td>
-        <td>Less than or equal to</td>
-        <td><code>5 &lt;= 3</code> is evaluated to 0</td>
-    </tr></tbody></table>
-<!----------------------------------->    
-    <h3>Example 4: Relational Operators</h3>
-    <pre>
+                            <!----------------------------------->
+                            <h3>C Relational Operators</h3>
+                            <p>The relationship between two operands is checked by a relational operator. It returns 1
+                                if the relationship is true, and 0 if the relationship is false.</p>
+                            <table border="1" cellpadding="1" cellspacing="1">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Operator</th>
+                                        <th scope="col">Meaning of Operator</th>
+                                        <th scope="col">Example</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>==</td>
+                                        <td>Equal to</td>
+                                        <td><code>5 == 3</code> is evaluated to 0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&gt;</td>
+                                        <td>Greater than</td>
+                                        <td><code>5 &gt; 3</code> is evaluated to 1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&lt;</td>
+                                        <td>Less than</td>
+                                        <td><code>5 &lt; 3</code> is evaluated to 0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>!=</td>
+                                        <td>Not equal to</td>
+                                        <td><code>5 != 3</code> is evaluated to 1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&gt;=</td>
+                                        <td>Greater than or equal to</td>
+                                        <td><code>5 &gt;= 3</code> is evaluated to 1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&lt;=</td>
+                                        <td>Less than or equal to</td>
+                                        <td><code>5 &lt;= 3</code> is evaluated to 0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!----------------------------------->
+                            <h3>Example 4: Relational Operators</h3>
+                            <pre>
         <code>// Working of relational operators
         #include &lt;stdio.h&gt;
         int main()
@@ -261,10 +427,10 @@
         
             return 0;
         }</code></pre>
-        
-        <p><strong>Output</strong></p>
-        
-        <pre>
+
+                            <p><strong>Output</strong></p>
+
+                            <pre>
         <samp>5 == 5 is 1
         5 == 10 is 0
         5 &gt; 5 is 0
@@ -277,24 +443,40 @@
         5 &gt;= 10 is 0
         5 &lt;= 5 is 1
         5 &lt;= 10 is 1 </samp></pre>
-<!----------------------------------->    
-    <h3>C Logical Operators</h3>
-    <table border="1" cellpadding="1" cellspacing="1"><thead><tr><th scope="col">Operator</th>
-        <th scope="col">Meaning</th>
-        <th scope="col">Example</th>
-    </tr></thead><tbody><tr><td>&amp;&amp;</td>
-        <td>Logical AND. True only if all operands are true</td>
-        <td>If c = 5 and d = 2 then, expression <code>((c==5) &amp;&amp; (d&gt;5))</code> equals to 0.</td>
-    </tr><tr><td>||</td>
-        <td>Logical OR. True only if either one operand is true</td>
-        <td>If c = 5 and d = 2 then, expression <code>((c==5) || (d&gt;5))</code> equals to 1.</td>
-    </tr><tr><td>!</td>
-        <td>Logical NOT. True only if the operand is 0</td>
-        <td>If c = 5 then, expression <code>!(c==5)</code> equals to 0.</td>
-    </tr></tbody></table>
-<!----------------------------------->    
-    <h3>Example 5: Logical Operators</h3>
-    <pre>
+                            <!----------------------------------->
+                            <h3>C Logical Operators</h3>
+                            <table border="1" cellpadding="1" cellspacing="1">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Operator</th>
+                                        <th scope="col">Meaning</th>
+                                        <th scope="col">Example</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>&amp;&amp;</td>
+                                        <td>Logical AND. True only if all operands are true</td>
+                                        <td>If c = 5 and d = 2 then, expression
+                                            <code>((c==5) &amp;&amp; (d&gt;5))</code> equals to 0.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>||</td>
+                                        <td>Logical OR. True only if either one operand is true</td>
+                                        <td>If c = 5 and d = 2 then, expression <code>((c==5) || (d&gt;5))</code> equals
+                                            to 1.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>!</td>
+                                        <td>Logical NOT. True only if the operand is 0</td>
+                                        <td>If c = 5 then, expression <code>!(c==5)</code> equals to 0.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!----------------------------------->
+                            <h3>Example 5: Logical Operators</h3>
+                            <pre>
         <code>// Working of logical operators
         
         #include &lt;stdio.h&gt;
@@ -323,58 +505,90 @@
             return 0;
         }
         </code></pre>
-        
-        <p><b>Output</b></p>
-        
-        <pre>
+
+                            <p><b>Output</b></p>
+
+                            <pre>
         <samp>(a == b) &amp;&amp; (c &gt; b) is 1 
         (a == b) &amp;&amp; (c &lt; b) is 0 
         (a == b) || (c &lt; b) is 1 
         (a != b) || (c &lt; b) is 0 
         !(a != b) is 1 
         !(a == b) is 0 </samp></pre>
-        
-        <p><strong>Explanation of logical operator program</strong></p>
-        
-        <ul><li><code>(a == b) &amp;&amp; (c &gt; 5)</code> evaluates to 1 because both operands <code>(a == b)</code> and <code>(c &gt; b)</code> is 1 (true).</li>
-            <li><code>(a == b) &amp;&amp; (c &lt; b)</code> evaluates to 0 because operand <code>(c &lt; b)</code> is 0 (false).</li>
-            <li><code>(a == b) || (c &lt; b)</code> evaluates to 1 because <code>(a = b)</code> is 1 (true).</li>
-            <li><code>(a != b) || (c &lt; b)</code> evaluates to 0 because both operand <code>(a != b)</code> and <code>(c &lt; b)</code> are 0 (false).</li>
-            <li><code>!(a != b)</code> evaluates to 1 because operand <code>(a != b)</code> is 0 (false). Hence, !(a != b) is 1 (true).</li>
-            <li><code>!(a == b)</code> evaluates to 0 because <code>(a == b)</code> is 1 (true). Hence, <code>!(a == b)</code> is 0 (false).</li>
-        </ul>
-<!----------------------------------->    
-    <h3>C Bitwise Operators</h3>
-    <p>Mathematical operations like as addition, subtraction, multiplication, division, and others are transformed to bit-level during computation, which speeds up processing and saves power.</p>
-    <table border="1" cellpadding="1" cellspacing="1"><thead><tr><th scope="col">Operators</th>
-        <th scope="col">Meaning of operators</th>
-    </tr></thead><tbody><tr><td>&amp;</td>
-        <td>Bitwise AND</td>
-    </tr><tr><td>|</td>
-        <td>Bitwise OR</td>
-    </tr><tr><td>^</td>
-        <td>Bitwise exclusive OR</td>
-    </tr><tr><td>~</td>
-        <td>Bitwise complement</td>
-    </tr><tr><td>&lt;&lt;</td>
-        <td>Shift left</td>
-    </tr><tr><td>&gt;&gt;</td>
-        <td>Shift right</td>
-    </tr></tbody></table>
-<!----------------------------------->    
-    <h2>Other Operators</h2>
-<!----------------------------------->    
-    <h3>Comma Operator</h3>
-    <p>Link related expressions</p>
-    <pre>
-        <code>int a, c = 5, d;</code></pre>
-<!----------------------------------->    
-    <h3>The sizeof operator</h3>
-    <p>The <code>sizeof</code> is a unary operator that returns the size of data (constants, variables, array, structure, etc).</p>
 
-<!----------------------------------->    
-    <h3>Example 6: sizeof Operator</h3>
-    <pre class="exec">
+                            <p><strong>Explanation of logical operator program</strong></p>
+
+                            <ul>
+                                <li><code>(a == b) &amp;&amp; (c &gt; 5)</code> evaluates to 1 because both operands
+                                    <code>(a == b)</code> and <code>(c &gt; b)</code> is 1 (true).
+                                </li>
+                                <li><code>(a == b) &amp;&amp; (c &lt; b)</code> evaluates to 0 because operand
+                                    <code>(c &lt; b)</code> is 0 (false).
+                                </li>
+                                <li><code>(a == b) || (c &lt; b)</code> evaluates to 1 because <code>(a = b)</code> is 1
+                                    (true).</li>
+                                <li><code>(a != b) || (c &lt; b)</code> evaluates to 0 because both operand
+                                    <code>(a != b)</code> and <code>(c &lt; b)</code> are 0 (false).
+                                </li>
+                                <li><code>!(a != b)</code> evaluates to 1 because operand <code>(a != b)</code> is 0
+                                    (false). Hence, !(a != b) is 1 (true).</li>
+                                <li><code>!(a == b)</code> evaluates to 0 because <code>(a == b)</code> is 1 (true).
+                                    Hence, <code>!(a == b)</code> is 0 (false).</li>
+                            </ul>
+                            <!----------------------------------->
+                            <h3>C Bitwise Operators</h3>
+                            <p>Mathematical operations like as addition, subtraction, multiplication, division, and
+                                others are transformed to bit-level during computation, which speeds up processing and
+                                saves power.</p>
+                            <table border="1" cellpadding="1" cellspacing="1">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Operators</th>
+                                        <th scope="col">Meaning of operators</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>&amp;</td>
+                                        <td>Bitwise AND</td>
+                                    </tr>
+                                    <tr>
+                                        <td>|</td>
+                                        <td>Bitwise OR</td>
+                                    </tr>
+                                    <tr>
+                                        <td>^</td>
+                                        <td>Bitwise exclusive OR</td>
+                                    </tr>
+                                    <tr>
+                                        <td>~</td>
+                                        <td>Bitwise complement</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&lt;&lt;</td>
+                                        <td>Shift left</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&gt;&gt;</td>
+                                        <td>Shift right</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!----------------------------------->
+                            <h2>Other Operators</h2>
+                            <!----------------------------------->
+                            <h3>Comma Operator</h3>
+                            <p>Link related expressions</p>
+                            <pre>
+        <code>int a, c = 5, d;</code></pre>
+                            <!----------------------------------->
+                            <h3>The sizeof operator</h3>
+                            <p>The <code>sizeof</code> is a unary operator that returns the size of data (constants,
+                                variables, array, structure, etc).</p>
+
+                            <!----------------------------------->
+                            <h3>Example 6: sizeof Operator</h3>
+                            <pre class="exec">
         <code>#include &lt;stdio.h&gt;
         int main()
         {
@@ -389,17 +603,18 @@
         
             return 0;
         }</code></pre>
-        
-        <p><strong>Output</strong></p>
-        
-        <pre>
+
+                            <p><strong>Output</strong></p>
+
+                            <pre>
         <samp>Size of int = 4 bytes
         Size of float = 4 bytes
         Size of double = 8 bytes
         Size of char = 1 byte</samp>
         </pre>
-        </div>
+            </div>
         </div>
     </div>
 </body>
+
 </html>
