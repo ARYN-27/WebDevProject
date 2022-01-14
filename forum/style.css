@@ -39,12 +39,21 @@ body {
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: nowrap;
-  gap: 83%;
+  gap: 75%;
   /* width: 94vw; */
   align-content: center;
   padding-top: 2px;
   padding-left: 16px;
   padding-right: 16px;
+}
+
+.nav-left {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 32px;
+  align-items: center;
 }
 
 .intro-text {
@@ -414,4 +423,148 @@ font {
 .forum-text {
   font-family: "Major Mono Display", monospace;
   font-size: 14px;
+}
+
+/**
+  =================================================================================================================================================
+  modal box
+  =================================================================================================================================================
+*/
+.wrapper {
+  height: 100vh;
+  /* This part is important for centering the content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* End center */
+  background: -webkit-linear-gradient(to right, #834d9b, #d04ed6);
+  background: linear-gradient(to right, #834d9b, #d04ed6);
+}
+
+.wrapper a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 3px;
+  text-transform: uppercase;
+  color: #585858;
+  font-family: "Roboto", sans-serif;
+}
+
+.modal {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(77 77 77 / 25%);
+  transition: all 0.4s;
+  height: 100vh;
+  flex-wrap: nowrap;
+}
+
+.modal:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal__content {
+  border-radius: 4px;
+  position: relative;
+  width: 500px;
+  max-width: 90%;
+  background: #fff;
+  padding: 2em 1em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 26px;
+  align-items: center;
+}
+
+.modal__footer {
+  text-align: right;
+  a {
+    color: #585858;
+  }
+  i {
+    color: #d02d2c;
+  }
+}
+.modal__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #585858;
+  text-decoration: none;
+}
+
+
+.qr-h1{
+  font-family: "Major Mono Display", monospace;
+  color: #000;
+}
+
+.qr-box{
+  border: 2px solid black;
+  width: 257px;
+}
+
+.qr-box:focus{
+  border-color: aquamarine;
+}
+
+.qr-box:hover {
+  border-color: aquamarine;
+}
+
+
+.item2 {
+  font-family: "Source Code Pro", monospace;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  color: #000;
+  cursor: pointer;
+  display: inline-flex;
+  fill: #000;
+  font-size: 12px;
+  font-weight: 400;
+  height: 23px;
+  /* width: 4px; */
+  justify-content: center;
+  letter-spacing: -0.8px;
+  line-height: 24px;
+  min-width: 140px;
+  outline: 0;
+  padding: 0 17px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.item2:focus {
+  color: #171e29;
+}
+
+.item2:hover {
+  border-color: #06f;
+  color: #06f;
+  fill: #06f;
+}
+
+@media (min-width: 768px) {
+  .button-59 {
+    min-width: 170px;
+  }
 }
