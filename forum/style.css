@@ -7,6 +7,22 @@ html {
   font-family: "Open Sans;", sans-serif;
 }
 
+/**
+  font{
+    font-family: "Major Mono Display", monospace;
+  }
+*/
+
+.navi-home {
+  transition: all 0.3s;
+  touch-action: manipulation;
+  cursor: pointer;
+}
+
+.navi-home:hover {
+  fill: #2afadf;
+}
+
 /* BEGIN BASIC FORUM STYLES */
 body {
   /**
@@ -20,15 +36,23 @@ body {
 
 .intro-box {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-wrap: nowrap;
+  gap: 83%;
+  /* width: 94vw; */
+  align-content: center;
+  padding-top: 2px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .intro-text {
   font-family: "Major Mono Display", monospace;
+  font-weight: 700;
   text-shadow: rgba(62, 66, 66, 0.28) 1px 18px 24px;
   color: black;
+  font-size: 32px;
 }
 #wrapper {
   /**
@@ -343,12 +367,20 @@ font {
   fill: #06f;
 }
 
-
 @media (min-width: 768px) {
   .button-59 {
     min-width: 170px;
   }
 }
+
+.login-text {
+  border: 2px solid #171e29;
+}
+
+.login-text::selection {
+  color: #06f;
+}
+
 /**
   
   ==============================

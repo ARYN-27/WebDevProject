@@ -3,12 +3,12 @@
 include 'database.php';
 include 'header.php';
 
-echo '<font style="font-size: 18px;">Sign in</font><br><br>';
+echo '<font style="font-size: 36px;font-family: \'Major Mono Display\'; font-weight:600;">sign in</font><br><br>';
 
 //first, check if the user is already signed in. If that is the case, there is no need to display this page
 if(isset($_SESSION['signed_in']) && $_SESSION['signed_in'] == true)
 {
-	echo '<br><font style="font-size: 14px;">You are already signed in.</font><br><br>';
+	echo '<br><font style="font-size: 18px;">You are already signed in.</font><br><br>';
 }
 else
 {
@@ -17,9 +17,9 @@ else
 		/*the form hasn't been posted yet, display it
 		  note that the action="" will cause the form to post to the same page it is on */
 		echo '<form method="post" action="">
-			<font style="font-size: 14px;">Username: </font><input type="text" name="user_name"></input><br><br>
-			<font style="font-size: 14px;">Password: </font><input type="password" name="user_pass"></input><br><br>
-			<input id="item" type="submit" value="sign in"></input>
+			<font style="font-size: 18px;">Username: </font><input type="text" name="user_name"></input><br><br>
+			<font style="font-size: 18px;">Password: </font><input type="password" name="user_pass"></input><br><br>
+			<input id="item" type="submit" value="sign in" class="login-text"></input>
 		 </form>';
 	}
 	else
@@ -33,17 +33,17 @@ else
 		
 		if(!isset($_POST['user_name']))
 		{
-			$errors[] = '<br><font style="font-size: 14px;">The username field must not be empty.</font><br><br>';
+			$errors[] = '<br><font style="font-size: 18px;">The username field must not be empty.</font><br><br>';
 		}
 		
 		if(!isset($_POST['user_pass']))
 		{
-			$errors[] = '<br><font style="font-size: 14px;">The password field must not be empty.</font><br><br>';
+			$errors[] = '<br><font style="font-size: 18px;">The password field must not be empty.</font><br><br>';
 		}
 		
 		if(!empty($errors)) /*check for an empty array, if there are errors, they're in this array (note the ! operator)*/
 		{
-			echo '<br><font style="font-size: 14px;">fields are not filled in correctly..</font><br><br>';
+			echo '<br><font style="font-size: 18px;">fields are not filled in correctly..</font><br><br>';
 			echo '<ul>';
 			foreach($errors as $key => $value) /* walk through the array so all the errors get displayed */
 			{
@@ -71,7 +71,7 @@ else
 			if(!$result)
 			{
 				//something went wrong, display the error
-				echo '<br><font style="font-size: 14px;">Something went wrong while signing in. Please try again later.</font><br><br>';
+				echo '<br><font style="font-size: 18px;">Something went wrong while signing in. Please try again later.</font><br><br>';
 				//echo mysql_error(); //debugging purposes, uncomment when needed
 			}
 			else
@@ -81,7 +81,7 @@ else
 				//2. the query returned an empty result set, the credentials were wrong
 				if(mysqli_num_rows($result) == 0)
 				{
-					echo '<br><font style="font-size: 14px;">You have supplied a wrong user/password combination. Please try again.</font><br><br>';
+					echo '<br><font style="font-size: 18px;">You have supplied a wrong user/password combination. Please try again.</font><br><br>';
 				}
 				else
 				{
@@ -96,7 +96,7 @@ else
 						$_SESSION['user_level'] = $row['user_level'];
 					}
 					
-					echo '<br><font style="font-size: 14px;">Welcome, ' . $_SESSION['user_name'] . '. <br /><a href="index.php">Proceed to the forum overview</a>.</font><br><br>';
+					echo '<br><font style="font-size: 18px;">Welcome, ' . $_SESSION['user_name'] . '. <br /><a href="index.php">Proceed to the forum overview</a>.</font><br><br>';
 				}
 			}
 		}
