@@ -27,6 +27,18 @@ html {
   */
 }
 
+.navi-home:hover {
+  fill: #2afadf;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+                rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.navi-home {
+  transition: all 0.3s;
+  touch-action: manipulation;
+  cursor: pointer;
+}
+
 /**
   =================================================================================================================================================
   Navigation Bar
@@ -66,8 +78,24 @@ ol a:hover {
   color: #f63c61;
 }
 
-.mini-nav{
+.mini-nav {
   display: flex;
+  height: 10vh;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 75%;
+  padding-top: 5px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.mini-nav-functions {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  gap: 27px;
 }
 
 /**
