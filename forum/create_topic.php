@@ -67,8 +67,6 @@ else
 	else
 	{
 	
-			//the form has been posted, so save it
-			//insert the topic into the topics table first, then we'll save the post into the posts table
 			$sql = "INSERT INTO 
 						topics(topic_subject,
 							   topic_date,

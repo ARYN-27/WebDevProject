@@ -5,7 +5,7 @@ include 'header.php';
 
 if($_SERVER['REQUEST_METHOD'] != 'POST')
 {
-	//someone is calling the file directly, which we don't want
+	
 	echo '<br><font style="font-size: 14px;">This file cannot be called directly.</font><br><br>';
 }
 else
