@@ -465,7 +465,7 @@ font {
   justify-content: center;
   background: rgb(77 77 77 / 25%);
   transition: all 0.4s;
-  height: 100vh;
+  height: 100%;
   flex-wrap: nowrap;
 }
 
