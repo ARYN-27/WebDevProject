@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -41,120 +40,35 @@
 
     <script src="../QR_V3/qr.min.js"></script>
 </head>
-
 <body>
-    <div class="page-border">
-        <!--Use this to add page border around page-->
+    <div class="page-border">  <!--Use this to add page border around page-->
         <div>
-            <div class="mini-nav">
-                <h1>c introduction</h1>
-                <div class="mini-nav-functions">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" width="40"
-                        fill="currentColor" onclick="location.href='#demo-modal'">
-                        <path fill-rule="evenodd"
-                            d="M3 4a1 1 0 011-1h3a1 1 0 011 1v3a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm2 2V5h1v1H5zM3 13a1 1 0 011-1h3a1 1 0 011 1v3a1 1 0 01-1 1H4a1 1 0 01-1-1v-3zm2 2v-1h1v1H5zM13 3a1 1 0 00-1 1v3a1 1 0 001 1h3a1 1 0 001-1V4a1 1 0 00-1-1h-3zm1 2v1h1V5h-1z"
-                            clip-rule="evenodd" />
-                        <path
-                            d="M11 4a1 1 0 10-2 0v1a1 1 0 002 0V4zM10 7a1 1 0 011 1v1h2a1 1 0 110 2h-3a1 1 0 01-1-1V8a1 1 0 011-1zM16 9a1 1 0 100 2 1 1 0 000-2zM9 13a1 1 0 011-1h1a1 1 0 110 2v2a1 1 0 11-2 0v-3zM7 11a1 1 0 100-2H4a1 1 0 100 2h3zM17 13a1 1 0 01-1 1h-2a1 1 0 110-2h2a1 1 0 011 1zM16 17a1 1 0 100-2h-3a1 1 0 100 2h3z" />
-                    </svg>
-                    <svg class="navi-home" xmlns="http://www.w3.org/2000/svg" viewBox="-2 -1.5 24 24" width="40"
-                        fill="currentColor" onclick="location.href='/WebProject/navigation-page.html'">
-                        <path
-                            d="M13 20.565v-5a3 3 0 0 0-6 0v5H2a2 2 0 0 1-2-2V7.697a2 2 0 0 1 .971-1.715l8-4.8a2 2 0 0 1 2.058 0l8 4.8A2 2 0 0 1 20 7.697v10.868a2 2 0 0 1-2 2h-5z">
-                        </path>
-                    </svg>
-                    <svg class="navi-home" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
-                        width="40" fill="currentColor" onclick="location.href='../forum/index.php'">
-                        <path fill-rule="evenodd"
-                            d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z"
-                            clip-rule="evenodd" />
-                    </svg>
-                </div>
-            </div>
+            <div class="content-box">  <!--Use this to center content in the page so it won't hit the borders-->
+    <h1>C if...else Statement</h1>
+    <p><b>In this tutorial, you will learn about the if statement (including if...else and nested if..else) in C programming with the help of examples.</b></p>
 
-            <!--Dynamic QR Code-->
-            <div id="demo-modal" class="modal">
-                <div class="modal__content">
-                    <h1>share your code</h1>
+    <h2>C if Statement</h2>
+    <p>The syntax of the if statement in C programming is:</p>
 
-                    <form>
-                        <input type="url" id="website" name="website" placeholder="copy and paste" required
-                            class="qr-box" />
-                        <button type="button" onclick="generateQRCode()" class="item2">
-                            GENERATE
-                        </button>
-                    </form>
+    <h5>
+        if (test expression) <br>
+    {<br>
+        // code<br>
+    }<br>
+    </h5>
 
-                    <div id="qrcode-container">
-                        <div id="qrcode" class="qrcode"></div>
-                    </div>
+    <h3>How if statement works?</h3>
+    <p>The if statement evaluates the test expression inside the parenthesis ().</p>
+    <p>
+        <li>If the test expression is evaluated to true, statements inside the body of if are executed.</li>
+        <li>If the test expression is evaluated to false, statements inside the body of if are not executed.</li>
+    </p>
+    <img src="img/sec2_1.png">
+    <p>To learn more about when test expression is evaluated to true (non-zero value) and false (0),
+         check <a href="#">relational</a> and <a href="#">logical operators.</a></p>
 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="navi-home" viewBox="0 0 20 20" fill="currentColor"
-                        width="50" onclick="location.href='#'">
-                        <path fill-rule="evenodd"
-                            d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
-                            clip-rule="evenodd" />
-                    </svg>
-
-                    <script type="text/javascript">
-                        function generateQRCode() {
-                            let website = document.getElementById("website").value;
-                            if (website) {
-                                let qrcodeContainer = document.getElementById("qrcode");
-                                qrcodeContainer.innerHTML = "";
-                                new QRCode(qrcodeContainer, website);
-                                /*With some styles*/
-                                /**
-                                    
-                                    let qrcodeContainer2 = document.getElementById("qrcode-2");
-                                    qrcodeContainer2.innerHTML = "";
-                                    new QRCode(qrcodeContainer2, {
-                                        text: website,
-                                        width: 128,
-                                        height: 128,
-                                        colorDark: "#5868bf",
-                                        colorLight: "#ffffff",
-                                        correctLevel: QRCode.CorrectLevel.H
-                                    });
-                                */
-                                document.getElementById("qrcode-container").style.display = "block";
-                            } else {
-                                alert("Please enter a valid URL");
-                            }
-                        }
-                    </script>
-                </div>
-            </div>
-            <!---------------------------------- Dynamic QR Code - END --------------------------------------------->
-            <div class="content-box">
-                <!--Use this to center content in the page so it won't hit the borders-->
-                <h1>c if...else statement</h1>
-                <p><b>In this tutorial, you will learn about the if statement (including if...else and nested if..else)
-                        in C programming with the help of examples.</b></p>
-
-                <h2>C if Statement</h2>
-                <p>The syntax of the if statement in C programming is:</p>
-
-                <h5>
-                    if (test expression) <br>
-                    {<br>
-                    // code<br>
-                    }<br>
-                </h5>
-
-                <h3>How if statement works?</h3>
-                <p>The if statement evaluates the test expression inside the parenthesis ().</p>
-                <p>
-                    <li>If the test expression is evaluated to true, statements inside the body of if are executed.</li>
-                    <li>If the test expression is evaluated to false, statements inside the body of if are not executed.
-                    </li>
-                </p>
-                <img src="img/sec2_1.png">
-                <p>To learn more about when test expression is evaluated to true (non-zero value) and false (0),
-                    check <a href="#">relational</a> and <a href="#">logical operators.</a></p>
-
-                <h3>Example 1: if statement</h3>
-                <pre><p>// Program to display a number if it is negative</p>
+    <h3>Example 1: if statement</h3>
+    <pre><p>// Program to display a number if it is negative</p>
         <code>#include &lt;stdio.h&gt;
          int main()
          {
@@ -172,36 +86,36 @@
         </code>
         </pre>
 
-                <h4>Output 1</h4>
-                <h5>
-                    Enter an integer: -2<br>
-                    You entered -2.<br>
-                    The if statement is easy.<br>
-                </h5>
-                <p>When the user enters -2, the test expression number less than 0
-                    is evaluated to true. Hence, You entered -2 is displayed on the screen.</p>
+         <h4>Output 1</h4>
+         <h5>
+            Enter an integer: -2<br>
+            You entered -2.<br>
+            The if statement is easy.<br>
+         </h5>
+         <p>When the user enters -2, the test expression number less than 0
+            is evaluated to true. Hence, You entered -2 is displayed on the screen.</p>
+    
 
+            <h4>Output 2</h4> 
+            <h5>
+                Enter an integer: 5<br>
+                The if statement is easy.
+            </h5>
+            <p>
+                When the user enters 5, the test expression number less than 0
+                is evaluated to false and the statement inside the body of if is not executed
+            </p>
 
-                <h4>Output 2</h4>
-                <h5>
-                    Enter an integer: 5<br>
-                    The if statement is easy.
-                </h5>
-                <p>
-                    When the user enters 5, the test expression number less than 0
-                    is evaluated to false and the statement inside the body of if is not executed
-                </p>
-
-                <h2>C if...else Statement</h2>
-                <p>The if statement may have an optional else block.
-                    The syntax of the if..else statement is:</p>
+            <h2>C if...else Statement</h2>
+            <p>The if statement may have an optional else block. 
+                The syntax of the if..else statement is:</p>
 
                 <h5>if (test expression) {<br>
                     // run code if test expression is true<br>
-                    }<br>
-                    else {<br>
+                }<br>
+                else {<br>
                     // run code if test expression is false<br>
-                    }</h5>
+                }</h5>
 
                 <h3>How if...else statement works?</h3>
                 <p>If the test expression is evaluated to true,
@@ -215,7 +129,7 @@
                 <img src="img/sec2_1-1.png">
                 <h3>Example 2: if...else statement</h3>
                 <p>// Check whether an integer is odd or even</p>
-                <pre>
+                 <pre>
                      <code>#include &lt;stdio.h&gt;
                  <br>int main()
                     <br>{
@@ -234,48 +148,47 @@
                      </code>
                      </pre>
 
-                <h4>Output </h4>
-                <h5>
+                 <h4>Output </h4>
+                 <h5>
                     Enter an integer: 7<br>
                     7 is an odd integer.
-                </h5>
+                 </h5>
 
-                <p>
+                 <p>
                     When the user enters 7, the test expression number%2==0 is evaluated to false.
                     Hence, the statement inside the body of else is executed.
-                </p>
+                 </p>
 
-                <h2>C if...else Ladder</h2>
-                <p>The <code>if...else</code> statement executes two different codes depending upon whether the test
-                    expression is true or false. Sometimes,
-                    a choice has to be made from more than 2 possibilities.</p>
-                <br>
-                <p>The <code>if...else</code> ladder allows you to check between multiple
-                    test expressions and execute different statements.</p>
+                 <h2>C if...else Ladder</h2>
+                 <p>The <code>if...else</code> statement executes two different codes depending upon whether the test expression is true or false. Sometimes, 
+                     a choice has to be made from more than 2 possibilities.</p>
+                     <br>
+                     <p>The <code>if...else</code> ladder allows you to check between multiple 
+                         test expressions and execute different statements.</p>
 
-                <h3>Syntax of if...else Ladder</h3>
-                <h5>
-                    <p>
-                        if (test expression1) {<br>
-                        // statement(s)<br>
-                        }<br>
-                        else if(test expression2) {<br>
-                        // statement(s)<br>
-                        }<br>
-                        else if (test expression3) {<br>
-                        // statement(s)<br>
-                        }<br>
-                        .<br>
-                        .<br>
-                        else {<br>
-                        // statement(s)<br>
-                        }
-                    </p>
-                </h5>
+                         <h3>Syntax of if...else Ladder</h3>
+                         <h5>
+                             <p>
+                                if (test expression1) {<br>
+                                    // statement(s)<br>
+                                 }<br>
+                                 else if(test expression2) {<br>
+                                    // statement(s)<br>
+                                 }<br>
+                                 else if (test expression3) {<br>
+                                    // statement(s)<br>
+                                 }<br>
+                                 .<br>
+                                 .<br>
+                                 else {<br>
+                                    // statement(s)<br>
+                                 }
+                             </p>
+                         </h5>
 
-                <h3>Example 3: C if...else Ladder</h3>
-                <p>// Program to relate two integers using =, > or < symbol</p>
-                        <pre>
+                         <h3>Example 3: C if...else Ladder</h3>
+                         <p>// Program to relate two integers using =, > or < symbol</p>
+                         <pre>
                              <code>
                                 #include &lt;stdio.h&gt;
                                     int main() {
@@ -301,24 +214,23 @@
                                     }
                              </code>
                          </pre>
-
-                        <h4>Output</h4>
-                        <h5>
+                        
+                         <h4>Output</h4>
+                         <h5>
                             Enter two integers: 12 <br>
                             23<br>
                             Result: 12 < 23<br>
-                        </h5>
+                         </h5>
 
-                        <h2>Nested if...else</h2>
-                        <p>It is possible to include an <code>if...else</code> statement
-                            inside the body of another <code>if...else</code> statement.</p>
+                         <h2>Nested if...else</h2>
+                         <p>It is possible to include an <code>if...else</code> statement 
+                             inside the body of another <code>if...else</code> statement.</p>
 
-                        <h3>Example 4: Nested if...else</h3>
-                        <p>This program given below relates two integers using either <,> and = similar to the if...else
-                                ladder's example.
+                             <h3>Example 4: Nested if...else</h3>
+                             <p>This program given below relates two integers using either <, > and = similar to the if...else ladder's example. 
                                 However, we will use a nested if...else statement to solve this problem.</p>
 
-                        <pre>
+                                <pre>
                                     <p>
                                         <code>#include &lt;stdio.h&gt;
                                             int main() {
@@ -362,10 +274,9 @@
                                                 </p>
                                     </p>
                                 </pre>
+                </div>
             </div>
         </div>
-    </div>
 
 </body>
-
 </html>
